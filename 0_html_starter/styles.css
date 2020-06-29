@@ -1,0 +1,27 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  /* background-color: black; */
+}
+
+p {
+  color: grey;
+}
+
+h1 {
+  color: grey;
+}
+
+.top-stripe {
+  background-color: black;
+  height: 100px;
+}
+
+.middle-stripe {
+  background-color: red;
+  height: 100px;
+}
+
+.bottom-stripe {
+  background-color: yellow;
+  height: 100px;
+}
