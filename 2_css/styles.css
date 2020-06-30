@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&family=Spectral:ital,wght@0,400;0,700;1,400&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6em;
+  width: 80vw;
+}
+
+.container {
+  /* max-width: 900px; */
+  color: rgb(59, 59, 59);
+}
+
+h1 {
+  font-family: "Spectral", serif;
+  padding: 0 10vw;
+}
+
+h2 {
+  font-family: "Spectral", serif;
+  border: 1px solid green;
+  margin: 1rem 0;
+  padding: 1rem 10vw;
+}
+
+nav {
+  padding: 0 10vw;
+  margin: auto;
+}
+
+nav > ul {
+  list-style: none;
+}
+
+nav > ul > li {
+  display: inline;
+  border: 1px solid pink;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+article {
+  padding: 1em;
+  margin: 1rem auto;
+  text-align: justify;
+  border: 1px solid green;
+  background-color: #c0c9fc;
+  float: left;
+  max-width: 80%;
+}
+
+aside {
+  float: right;
+  background-color: grey;
+  max-width: 20%;
+}
+
+aside p {
+  font-size: 0.8rem;
+}
+
+main {
+  display: flow-root;
+}
+
+img {
+  width: 100%;
+}
+
+.read-more-btn {
+  padding: 10px 30px;
+  background-color: #c0c9fc;
+  color: white;
+  font-size: 1.05rem;
+}
+
+header {
+  border: 1px solid green;
+  background-color: beige;
+}
+
+.garish {
+  background-color: fuchsia;
+}
+
+footer {
+  background-color: pink;
+}
+
+@media screen and (min-width: 600px) {
+  header {
+    background-color: palevioletred;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  aside {
+    display: none;
+  }
+
+  article {
+    max-width: 100%;
+  }
+}

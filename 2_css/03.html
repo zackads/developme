@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+  <head>
+    <!-- Must be at top of <head> tag for efficiency and so everything else displays quickly-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- The responsive tag -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <!-- To support old IE... -->
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" sizes="192x192" href="favicon.ico" />
+
+    <title>Another website</title>
+    <meta name="description" content="Second project in week 0 of DevelopMe" />
+  </head>
+  <body>
+    <header>
+      <h1>This is a header</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="code.html">Code</a>
+        <a href="news.html">News</a>
+      </nav>
+    </header>
+    <main>
+      <article>
+        <h2>Cool video</h2>
+        <video
+          src="https://archive.org/download/Rick_Astley_Never_Gonna_Give_You_Up/Rick_Astley_Never_Gonna_Give_You_Up.mp4"
+          width="80%"
+          controls
+        ></video>
+      </article>
+      <article>
+        <h2>Picture, with caption</h2>
+        <picture>
+          <source
+            srcset="
+              https://comicvine1.cbsistatic.com/uploads/square_small/0/77/850242-_40153112_danwink300300.jpg
+            "
+            media="(min-width: 800px)"
+          />
+          <source
+            srcset="
+              https://www.gazette-news.co.uk/resources/images/10454699.jpg?display=1&htype=0&type=responsive-gallery
+            "
+          />
+          <img src="rain.jpg" width="400px" />
+        </picture>
+      </article>
+      <article>
+        <h2>Reusable Content</h2>
+        <blockquote>
+          <em>Eleanor Roosevelt once said:</em>
+          <q>You must do the things you think you cannot do.</q>
+        </blockquote>
+        <p>Lorem ipsum <b>etc. etc. etc.</b></p>
+        <p>
+          Christmas is the
+          <time datetime="2020-12-25">25<sup>th</sup> December</time>
+        </p>
+      </article>
+    </main>
+    <aside>
+      <h3>This content isn't main content</h3>
+      <ol>
+        <li>First List Item</li>
+        <li class="second">This list item has a class of second</li>
+        <li>Third li</li>
+      </ol>
+      <table>
+        <tr>
+          <th>Dessert</th>
+          <th>Calories</th>
+          <th>Fat</th>
+          <th>Carbs</th>
+        </tr>
+        <tr>
+          <td>Frozen yoghurt</td>
+          <td>159</td>
+          <td>6.0</td>
+          <td>24</td>
+        </tr>
+        <tr>
+          <td>Ice cream sandwich</td>
+          <td>237</td>
+          <td>9.0</td>
+          <td>37</td>
+        </tr>
+        <tr>
+          <td>Eclair</td>
+          <td>262</td>
+          <td>16.0</td>
+          <td>24</td>
+        </tr>
+      </table>
+    </aside>
+    <footer>
+      <p>&copy; Company 2018</p>
+    </footer>
+  </body>
+</html>
