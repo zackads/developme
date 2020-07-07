@@ -1,0 +1,11 @@
+:root {
+    /* Font families */
+  --banner-background-color: #fff0e9;
+  --bodytext-font-family: Nunito, sans-serif;
+
+    /* Colours */
+  --tag-background-color: #41cadd;
+  --button-color: rgba(255, 106, 124, 1);
+  --button-hover-color: rgba(var(--button-color), 0.8);
+  -
+}
