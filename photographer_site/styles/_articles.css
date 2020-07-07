@@ -1,0 +1,22 @@
+.article-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 400px;
+}
+
+/* .article-card tag,
+h3,
+bodytext-small,
+bodytext,
+bodytext-link {
+  display: inline-block;
+} */
+
+.tag {
+  display: inline;
+  background-color: var(--tag-color);
+  border-radius: 2px;
+  border-style: none;
+  padding: 0.5rem;
+}

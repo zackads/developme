@@ -1,0 +1,26 @@
+@import "_settings.css";
+
+.navbar-link {
+  display: inline;
+  color: var(--text-color);
+  padding: 0 2rem;
+}
+
+.navbar-link:hover {
+  text-decoration: underline;
+}
+
+.banner {
+  background-color: var(--banner-background-color);
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+}
+
+.tag {
+  display: inline;
+  background-color: var(--tag-color);
+  border-radius: 2px;
+  border-style: none;
+  padding: 0.5rem;
+}

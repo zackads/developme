@@ -1,0 +1,15 @@
+input,
+textarea {
+  border: 1px solid var(--form-outline-color);
+}
+
+button {
+  background-color: var(--accent-color);
+  border-radius: 2px;
+  border-style: none;
+  padding: 1rem 2rem;
+}
+
+button:hover {
+  background-color: var(--accent-hover-color);
+}

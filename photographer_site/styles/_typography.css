@@ -1,3 +1,75 @@
+@import "_settings.css";
+@import "_fonts.css";
+
+/* Font families */
+:root {
+  --bodytext-font-family: Nunito, sans-serif;
+  --accent-font-family: Pacifico, sans-serif;
+  --button-color: #fefefe;
+}
+
+body {
+  font-family: var(--bodytext-font-family);
+  color: var(--text-color);
+}
+
 .heading-title {
-  font-family: Pacifico;
+  font-family: var(--accent-font-family);
+  font-size: 2.25rem;
+}
+
+.heading-medium {
+  font-size: 3rem;
+}
+
+.heading-small {
+  font-size: 1.5rem;
+}
+
+.bodytext-link {
+  color: var(--link-color);
+}
+
+.bodytext-small {
+  font-size: 0.8125rem;
+  color: var(--text-color);
+}
+
+.hero-text {
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.hero-accent-text-1 {
+  font-weight: bold;
+  font-size: 3rem;
+  color: var(--accent-color);
+}
+
+.hero-accent-text-2 {
+  font-family: var(--accent-font-family);
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.banner {
+  font-family: var(--bodytext-font-family);
+}
+
+.navbar-link {
+  font-family: var(--bodytext-font-family);
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.tag {
+  font-size: 0.875rem;
+  color: var(--button-color);
+}
+
+button {
+  font-family: var(--bodytext-font-family);
+  font-size: 1.5rem;
+  color: var(--button-color);
 }

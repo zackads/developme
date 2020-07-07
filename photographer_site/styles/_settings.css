@@ -1,11 +1,11 @@
 :root {
-    /* Font families */
+  /* Colours */
+  --text-color: #4a4a4a;
+  --link-color: #41cadd;
   --banner-background-color: #fff0e9;
-  --bodytext-font-family: Nunito, sans-serif;
-
-    /* Colours */
-  --tag-background-color: #41cadd;
-  --button-color: rgba(255, 106, 124, 1);
-  --button-hover-color: rgba(var(--button-color), 0.8);
-  -
+  --tag-color: rgba(65, 202, 221, 1);
+  --tag-hover-color: rgba(65, 202, 221, 0.77);
+  --accent-color: rgba(255, 106, 124, 1);
+  --accent-hover-color: rgba(255, 106, 124, 0.8);
+  --form-outline-color: #b2b5ba;
 }
