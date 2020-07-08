@@ -8,8 +8,16 @@ button {
   border-radius: 2px;
   border-style: none;
   padding: 1rem 2rem;
+  font-family: var(--bodytext-font-family);
+  font-size: 1.5rem;
+  color: var(--button-color);
 }
 
 button:hover {
   background-color: var(--accent-hover-color);
+}
+
+.tag {
+  font-size: 0.875rem;
+  color: var(--button-color);
 }

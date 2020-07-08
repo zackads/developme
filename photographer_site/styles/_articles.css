@@ -5,14 +5,6 @@
   width: 400px;
 }
 
-/* .article-card tag,
-h3,
-bodytext-small,
-bodytext,
-bodytext-link {
-  display: inline-block;
-} */
-
 .tag {
   display: inline;
   background-color: var(--tag-color);
