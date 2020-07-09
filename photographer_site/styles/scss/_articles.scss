@@ -1,0 +1,35 @@
+.card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  /* align-items: center; */
+  justify-content: center;
+  width: 400px;
+  height: 800px;
+  border: 1px solid blue;
+
+  &__tag {
+    @extend .tag;
+    margin: 1rem 1rem;
+  }
+
+  &__heading--small {
+    @extend .heading--small;
+    text-align: center;
+    width: 100%;
+    margin: 0.2rem;
+  }
+
+  &__bodytext--small {
+    @extend .bodytext--small;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  &__bodytext--link {
+    @extend .bodytext--link;
+    margin-top: auto;
+  }
+}

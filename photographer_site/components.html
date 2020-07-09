@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Component Library</title>
-    <link rel="stylesheet" href="/styles/styles.css" />
+    <link rel="stylesheet" href="/styles/css/main.css" />
     <script src="/script.js" async defer></script>
   </head>
   <body class="container">
@@ -14,12 +14,12 @@
       <section id="typography">
         <h2>typography</h2>
         <hr />
-        <h1 class="heading-title">heading-title</h1>
-        <h2 class="heading-medium">heading-medium</h2>
-        <h3 class="heading-small">heading-small</h3>
-        <p class="bodytext-regular">bodytext-regular</p>
-        <a class="bodytext-link" href="#">bodytext-link</a>
-        <p class="bodytext-small">bodytext-small</p>
+        <h1 class="heading--title">heading-title</h1>
+        <h2 class="heading--medium">heading-medium</h2>
+        <h3 class="heading--small">heading-small</h3>
+        <p class="bodytext--regular">bodytext-regular</p>
+        <a class="bodytext--link" href="#">bodytext-link</a>
+        <p class="bodytext--small">bodytext-small</p>
         <p class="hero-text">hero-text</p>
         <p class="hero-accent-text-1">hero-accent-text-1</p>
         <p class="hero-accent-text-2">hero-accent-text-2</p>
@@ -59,23 +59,23 @@
           <img src="/assets/social_icons/youtube.svg" alt="Youtube logo" />
         </div>
       </section>
-      <section id="article-card">
+      <section id="card">
         <h2>article-card</h2>
-        <div class="article-card">
+        <div class="card">
           <img src="/assets/images/jellies.png" />
-          <span class="tag">html</span>
-          <span class="tag">css</span>
-          <h3>Blog title</h3>
-          <p class="bodytext-small">
+          <span class="card__tag">html</span>
+          <span class="card__tag">css</span>
+          <h3 class="card__heading--small">Blog title</h3>
+          <p class="card__bodytext--small">
             Posted on <time datetime="2020-07-07">7 July, 2020</time>
           </p>
-          <p class="bodytext">
+          <p class="card__bodytext">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi
             iusto consequatur, accusantium excepturi consectetur explicabo? Qui,
             eaque. Deleniti eaque temporibus, a magnam eum rerum odio
             consequatur fuga nulla quis voluptas!
           </p>
-          <a href="#" class="bodytext-link">Continue reading...</a>
+          <a href="#" class="card__bodytext--link">Continue reading...</a>
         </div>
       </section>
       <section id="article-main">

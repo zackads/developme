@@ -18,43 +18,49 @@
 }
 
 /* Font families */
-:root {
-  --bodytext-font-family: Nunito, sans-serif;
-  --accent-font-family: Pacifico, sans-serif;
-  --button-color: #fefefe;
-}
+$bodytext-font-family: Nunito, sans-serif;
+$accent-font-family: Pacifico, sans-serif;
 
 /* Typographic elements */
 
 /* Elements where the function of that element is solely to display text are styled here.  
 Elements containing text but performing another function are styled in the area relevant to that function.  
-For example, the `<button>` element is styled in `_forms.css`. */
+E.g. the `<button>` element is styled in `_forms.scss`. */
 
 body {
-  font-family: var(--bodytext-font-family);
-  color: var(--text-color);
+  font-family: $bodytext-font-family;
+  color: $text-color;
+  line-height: 1.6;
 }
 
-.heading-title {
-  font-family: var(--accent-font-family);
+.heading {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.heading--title {
+  @extend .heading;
+  font-family: $accent-font-family;
   font-size: 2.25rem;
 }
 
-.heading-medium {
-  font-size: 3rem;
-}
-
-.heading-small {
+.heading--small {
+  @extend .heading;
   font-size: 1.5rem;
 }
 
-.bodytext-link {
-  color: var(--link-color);
+.bodytext {
+  margin: 0;
 }
 
-.bodytext-small {
+.bodytext--link {
+  @extend .bodytext;
+  color: $link-color;
+}
+
+.bodytext--small {
+  @extend .bodytext;
   font-size: 0.8125rem;
-  color: var(--text-color);
 }
 
 .hero-text {
@@ -65,21 +71,21 @@ body {
 .hero-accent-text-1 {
   font-weight: bold;
   font-size: 3rem;
-  color: var(--accent-color);
+  color: $accent-color;
 }
 
 .hero-accent-text-2 {
-  font-family: var(--accent-font-family);
+  font-family: $accent-font-family;
   font-weight: bold;
   font-size: 3rem;
 }
 
 .banner {
-  font-family: var(--bodytext-font-family);
+  font-family: $bodytext-font-family;
 }
 
 .navbar-link {
-  font-family: var(--bodytext-font-family);
+  font-family: $bodytext-font-family;
   font-size: 1.125rem;
   text-transform: uppercase;
   text-decoration: none;

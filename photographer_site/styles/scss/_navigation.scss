@@ -2,7 +2,7 @@
 
 .navbar-link {
   display: inline;
-  color: var(--text-color);
+  color: $text-color;
   padding: 0 2rem;
 }
 
@@ -11,7 +11,7 @@
 }
 
 .banner {
-  background-color: var(--banner-background-color);
+  background-color: $banner-background-color;
   height: 100px;
   line-height: 100px;
   text-align: center;
