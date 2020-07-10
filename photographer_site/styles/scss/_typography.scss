@@ -85,11 +85,23 @@ body {
 .hero-text {
   font-weight: bold;
   font-size: 3rem;
+
+  @include for-phone-only {
+    font-size: 24px;
+  }
+
+  @include for-tablet-portrait-up {
+    font-size: 36px;
+  }
+
+  @include for-tablet-landscape-up {
+    font-size: 48px;
+  }
 }
 
 .hero {
   position: relative;
-  text-align: center;
+  text-align: left;
   width: 100%;
   height: auto;
   color: $accent-text-color;
@@ -101,9 +113,11 @@ body {
 
   &__text {
     @extend .hero-text;
+    margin: 0;
     position: absolute;
-    top: 8px;
-    left: 16px;
+    top: 50%;
+    left: 1rem;
+    transform: translate(0, -50%);
   }
 
   &__text--accent1 {
