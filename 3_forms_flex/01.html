@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>ComplainAboutDean.com</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+    <header><h1>Dean complaint form</h1></header>
+    <main>
+      <form method="POST" action="/complain_about_dean">
+        <div class="form-group">
+          <label for="textarea">Describe what Dean did to you</label>
+          <textarea name="textarea" id="textarea" rows="5"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="submitter-name">Name</label>
+          <input
+            type="text"
+            id="submitter-name"
+            name="submitter-name"
+            placeholder="Your name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="submitter-email">Email</label>
+          <input
+            type="submitter-email"
+            id="submitter-email"
+            name="submitter-email"
+            placeholder="Your email address"
+          />
+        </div>
+        <div class="form-group">
+          <label for="submitter-website">Website</label>
+          <input
+            type="url"
+            id="submitter-website"
+            name="submitter-website"
+            placeholder="URL of screenshot or video of Dean doing bad stuff."
+          />
+        </div>
+        <button type="submit">
+          Complain about Dean
+        </button>
+      </form>
+    </main>
+    <script src="#" async defer></script>
+  </body>
+</html>

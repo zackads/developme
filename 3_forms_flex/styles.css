@@ -1,0 +1,38 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 80vw;
+  margin: auto;
+}
+
+label {
+  font-size: 0.8rem;
+  color: dimgray;
+  display: block;
+}
+
+input,
+textarea {
+  width: 100%;
+  border-radius: 2px;
+  border: 1px solid dimgrey;
+  margin: 0.5em 0;
+  padding: 0.5em;
+}
+
+.form-group {
+  margin: 0.5em 0;
+}
+
+button {
+  margin: 1em 0;
+  padding: 1em 1em;
+  background-color: deeppink;
+  color: white;
+  border: 2px solid red;
+  border-radius: 2px;
+  font-weight: bold;
+}
+
+button:hover {
+  rotate: 10deg;
+}
