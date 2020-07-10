@@ -38,6 +38,9 @@
     }
   }
 
+  .card-grid {
+  }
+
   &__portrait-1 {
     @extend .photo-grid__image;
     grid-area: portrait-1;
