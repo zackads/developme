@@ -1,18 +1,34 @@
 @import "_settings.css";
 
-.navbar-link {
-  display: inline;
-  color: $text-color;
-  padding: 0 2rem;
+.navbar {
+  &__list {
+    list-style-type: none;
+  }
+
+  &__link {
+    font-family: $bodytext-font-family;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline;
+    color: $text-color;
+    padding: 0 2rem;
+  }
+
+  &__link:hover {
+    text-decoration: underline;
+  }
 }
 
-.navbar-link:hover {
-  text-decoration: underline;
-}
+.social-buttons {
+  &__list {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+  }
 
-.banner {
-  background-color: $banner-background-color;
-  height: 100px;
-  line-height: 100px;
-  text-align: center;
+  &__link {
+    display: inline;
+    margin: 0 1rem;
+  }
 }

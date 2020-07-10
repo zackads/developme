@@ -1,4 +1,5 @@
 /* Colours */
+/* Media breakpoints */
 /* Import font files */
 @import "_settings.css";
 @font-face {
@@ -21,74 +22,25 @@
 /* Elements where the function of that element is solely to display text are styled here.  
 Elements containing text but performing another function are styled in the area relevant to that function.  
 E.g. the `<button>` element is styled in `_forms.scss`. */
+html {
+  font-size: 14px;
+}
+@media (min-width: 900px) {
+  html {
+    font-size: 16px;
+  }
+}
+
 body {
   font-family: Nunito, sans-serif;
   color: #4a4a4a;
   line-height: 1.6;
 }
 
-.heading, .heading--small, .card__heading--small, .heading--title {
+.heading, .heading--small, .recent-posts__header,
+.recent-comments__header, .card__heading--small, .heading--title {
   font-size: 3rem;
   margin: 0;
-}
-
-.heading--title {
-  font-family: Pacifico, sans-serif;
-  font-size: 2.25rem;
-}
-
-.heading--small, .card__heading--small {
-  font-size: 1.5rem;
-}
-
-.bodytext, .bodytext--small, .card__bodytext--small, .bodytext--link, .card__bodytext--link {
-  margin: 0;
-}
-
-.bodytext--link, .card__bodytext--link {
-  color: #41cadd;
-}
-
-.bodytext--small, .card__bodytext--small {
-  font-size: 0.8125rem;
-}
-
-.hero-text {
-  font-weight: bold;
-  font-size: 3rem;
-}
-
-.hero-accent-text-1 {
-  font-weight: bold;
-  font-size: 3rem;
-  color: #ff6a7c;
-}
-
-.hero-accent-text-2 {
-  font-family: Pacifico, sans-serif;
-  font-weight: bold;
-  font-size: 3rem;
-}
-
-.banner {
-  font-family: Nunito, sans-serif;
-}
-
-.navbar-link {
-  font-family: Nunito, sans-serif;
-  font-size: 1.125rem;
-  text-transform: uppercase;
-  text-decoration: none;
-}
-
-.navbar-link {
-  display: inline;
-  color: #4a4a4a;
-  padding: 0 2rem;
-}
-
-.navbar-link:hover {
-  text-decoration: underline;
 }
 
 .banner {
@@ -96,6 +48,104 @@ body {
   height: 100px;
   line-height: 100px;
   text-align: center;
+}
+
+.heading--title {
+  font-family: Pacifico, sans-serif;
+  font-size: 2.25rem;
+}
+
+.heading--small, .recent-posts__header,
+.recent-comments__header, .card__heading--small {
+  font-size: 1.5rem;
+}
+
+.bodytext, .card__bodytext, .bodytext--small, .article-body__date, .card__bodytext--small, .bodytext--link, .card__bodytext--link, .card__bodytext--link:visited, .bodytext--link:visited {
+  margin: 0;
+}
+
+.bodytext--link, .card__bodytext--link, .card__bodytext--link:visited, .bodytext--link:visited {
+  color: #41cadd;
+}
+
+.bodytext--link:visited, .card__bodytext--link:visited {
+  color: #41cadd;
+}
+
+.bodytext--small, .article-body__date, .card__bodytext--small {
+  font-size: 0.8125rem;
+}
+
+.hero-text, .hero__text--accent2, .hero__text--accent1, .hero__text {
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.hero {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  color: #fefefe;
+}
+.hero__image {
+  width: 100%;
+  height: auto;
+}
+.hero__text {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+.hero__text--accent1 {
+  color: #ff6a7c;
+}
+.hero__text--accent2 {
+  font-family: Pacifico, sans-serif;
+  color: #41cadd;
+}
+
+.banner {
+  font-family: Nunito, sans-serif;
+}
+
+.link-list, .recent-posts__list,
+.recent-comments__list {
+  padding: 0;
+  list-style-type: none;
+  line-height: 2.5;
+}
+
+.link-list__a, .recent-posts__link:visited,
+.recent-comments__link:visited, .recent-posts__link,
+.recent-comments__link {
+  color: #4a4a4a;
+}
+
+.navbar__list {
+  list-style-type: none;
+}
+.navbar__link {
+  font-family: Nunito, sans-serif;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline;
+  color: #4a4a4a;
+  padding: 0 2rem;
+}
+.navbar__link:hover {
+  text-decoration: underline;
+}
+
+.social-buttons__list {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+.social-buttons__link {
+  display: inline;
+  margin: 0 1rem;
 }
 
 input,
@@ -117,12 +167,22 @@ button:hover {
   background-color: rgba(255, 106, 124, 0.8);
 }
 
-.tag, .card__tag {
+.tag, .article-body__tag--item, .card__tag {
   font-size: 0.875rem;
   color: #fefefe;
   background-color: #41cadd;
   padding: 0.2rem 1rem;
   border-radius: 2px;
+}
+
+.contact-form__label {
+  display: block;
+  margin-bottom: 1rem;
+}
+.contact-form__input {
+  display: block;
+  margin-top: 1rem;
+  width: 100%;
 }
 
 /* Style the button that is used to open and close the collapsible content */
@@ -156,25 +216,35 @@ button:hover {
   border-radius: 2px;
 }
 
-.social-buttons {
-  display: flex;
-  justify-content: space-around;
-  max-width: 400px;
-}
-
 .card {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: center;
-  /* align-items: center; */
-  justify-content: center;
-  width: 400px;
-  height: 800px;
-  border: 1px solid blue;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  min-height: 447px;
+}
+@media (min-width: 600px) {
+  .card {
+    width: 335px;
+  }
+}
+@media (min-width: 900px) {
+  .card {
+    width: 420px;
+  }
+}
+.card__image {
+  width: 100%;
+  height: auto;
+}
+.card__tag-container {
+  padding: 1rem;
+  text-align: center;
 }
 .card__tag {
-  margin: 1rem 1rem;
+  margin: 0.5rem;
+  display: inline-block;
 }
 .card__heading--small {
   text-align: center;
@@ -186,8 +256,33 @@ button:hover {
   width: 100%;
   margin-bottom: 1rem;
 }
+.card__bodytext {
+  text-align: center;
+}
 .card__bodytext--link {
   margin-top: auto;
+}
+
+.article-body__image {
+  width: 100%;
+  height: auto;
+}
+.article-body__date {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.article-body__tag--list {
+  padding: 0;
+  list-style-type: none;
+}
+.article-body__tag--item {
+  display: inline-block;
+  margin: 1rem 2rem 0 0;
+}
+
+.recent-posts__link,
+.recent-comments__link {
+  color: #4a4a4a;
 }
 
 /*# sourceMappingURL=main.css.map */

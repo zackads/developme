@@ -27,6 +27,13 @@ $accent-font-family: Pacifico, sans-serif;
 Elements containing text but performing another function are styled in the area relevant to that function.  
 E.g. the `<button>` element is styled in `_forms.scss`. */
 
+html {
+  font-size: 14px;
+  @include for-tablet-landscape-up {
+    font-size: 16px;
+  }
+}
+
 body {
   font-family: $bodytext-font-family;
   color: $text-color;
@@ -36,6 +43,13 @@ body {
 .heading {
   font-size: 3rem;
   margin: 0;
+}
+
+.banner {
+  background-color: $banner-background-color;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
 }
 
 .heading--title {
@@ -58,6 +72,11 @@ body {
   color: $link-color;
 }
 
+.bodytext--link:visited {
+  @extend .bodytext--link;
+  color: $link-color;
+}
+
 .bodytext--small {
   @extend .bodytext;
   font-size: 0.8125rem;
@@ -68,25 +87,47 @@ body {
   font-size: 3rem;
 }
 
-.hero-accent-text-1 {
-  font-weight: bold;
-  font-size: 3rem;
-  color: $accent-color;
-}
+.hero {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  color: $accent-text-color;
 
-.hero-accent-text-2 {
-  font-family: $accent-font-family;
-  font-weight: bold;
-  font-size: 3rem;
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+
+  &__text {
+    @extend .hero-text;
+    position: absolute;
+    top: 8px;
+    left: 16px;
+  }
+
+  &__text--accent1 {
+    @extend .hero-text;
+    color: $accent-color-1;
+  }
+
+  &__text--accent2 {
+    @extend .hero-text;
+    font-family: $accent-font-family;
+    color: $accent-color-2;
+  }
 }
 
 .banner {
   font-family: $bodytext-font-family;
 }
 
-.navbar-link {
-  font-family: $bodytext-font-family;
-  font-size: 1.125rem;
-  text-transform: uppercase;
-  text-decoration: none;
+.link-list {
+  padding: 0;
+  list-style-type: none;
+  line-height: 2.5;
+}
+
+.link-list__a {
+  color: $text-color;
 }

@@ -4,7 +4,7 @@ textarea {
 }
 
 button {
-  background-color: $accent-color;
+  background-color: $accent-color-1;
   border-radius: 2px;
   border-style: none;
   padding: 1rem 2rem;
@@ -23,4 +23,17 @@ button:hover {
   background-color: $tag-color;
   padding: 0.2rem 1rem;
   border-radius: 2px;
+}
+
+.contact-form {
+  &__label {
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  &__input {
+    display: block;
+    margin-top: 1rem;
+    width: 100%;
+  }
 }

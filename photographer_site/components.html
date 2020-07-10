@@ -10,7 +10,7 @@
   <body class="container">
     <header><h1>Component Library</h1></header>
     <button type="button" class="collapsible">atoms</button>
-    <div class="content">
+    <article class="content">
       <section id="typography">
         <h2>typography</h2>
         <hr />
@@ -38,58 +38,173 @@
         <textarea class="textarea" placeholder="textarea"></textarea>
         <button class="button">button</button>
       </section>
-    </div>
+    </article>
     <button type="button" class="collapsible">molecules</button>
-    <div class="content">
+    <article class="content">
       <section id="navbar-links">
         <h2>navbar-links</h2>
-        <a href="#" class="navbar-link">home</a>
-        <a href="#" class="navbar-link">blog</a>
-        <a href="#" class="navbar-link">contact</a>
+        <nav class="navbar">
+          <ul class="navbar__list">
+            <a class="navbar__link" href="#">home</a>
+            <a class="navbar__link" href="#">blog</a>
+            <a class="navbar__link" href="#">contact</a>
+          </ul>
+        </nav>
       </section>
-      <section id="hero-image">
+      <section>
         <h2>hero-image</h2>
+        <div class="hero">
+          <img
+            class="hero__image"
+            src="/assets/images/hero.png"
+            alt="Hero image of Jo the photographer"
+          />
+          <p class="hero__text">
+            My name is Jo<span class="hero__text--accent1">.</span><br />
+            I'm a <span class="hero__text--accent2">photographer</span>
+          </p>
+        </div>
       </section>
       <section id="social-buttons">
         <h2>social-buttons</h2>
-        <div class="social-buttons">
-          <img src="/assets/social_icons/twitter.svg" alt="Twitter logo" />
-          <img src="/assets/social_icons/instagram.svg" alt="Instagram logo" />
-          <img src="/assets/social_icons/facebook.svg" alt="Facebook logo" />
-          <img src="/assets/social_icons/youtube.svg" alt="Youtube logo" />
-        </div>
+        <nav class="social-buttons">
+          <ul class="social-buttons__list">
+            <li class="social-buttons__link">
+              <img src="/assets/social_icons/twitter.svg" alt="Twitter logo" />
+            </li>
+            <li class="social-buttons__link">
+              <img
+                src="/assets/social_icons/instagram.svg"
+                alt="Instagram logo"
+              />
+            </li>
+            <li class="social-buttons__link">
+              <img
+                src="/assets/social_icons/facebook.svg"
+                alt="Facebook logo"
+              />
+            </li>
+            <li class="social-buttons__link">
+              <img src="/assets/social_icons/youtube.svg" alt="Youtube logo" />
+            </li>
+          </ul>
+        </nav>
       </section>
       <section id="card">
-        <h2>article-card</h2>
-        <div class="card">
-          <img src="/assets/images/jellies.png" />
-          <span class="card__tag">html</span>
-          <span class="card__tag">css</span>
+        <h2>card</h2>
+        <article class="card">
+          <img class="card__image" src="/assets/images/jellies.png" />
+          <div class="card__tag-container">
+            <span class="card__tag">html</span>
+            <span class="card__tag">css</span>
+          </div>
           <h3 class="card__heading--small">Blog title</h3>
-          <p class="card__bodytext--small">
+          <p class="card__date">
             Posted on <time datetime="2020-07-07">7 July, 2020</time>
           </p>
           <p class="card__bodytext">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi
-            iusto consequatur, accusantium excepturi consectetur explicabo? Qui,
-            eaque. Deleniti eaque temporibus, a magnam eum rerum odio
-            consequatur fuga nulla quis voluptas!
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
           </p>
           <a href="#" class="card__bodytext--link">Continue reading...</a>
+        </article>
+      </section>
+      <section id="article-body">
+        <h2>article</h2>
+        <section class="article-body">
+          <img
+            class="article-body__image"
+            src="/assets/images/turtle.png"
+            alt="photo of turtles"
+          />
+          <p class="article-body__date">
+            Posted on <time datetime="2020-07-07">7 July, 2020</time>
+          </p>
+          <p class="article-body__text">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae
+            repudiandae vel inventore velit nostrum! Laboriosam rerum, dolorum
+            repudiandae eaque pariatur, placeat in labore ipsum dolore totam
+            tempore voluptatibus facilis quaerat. Lorem, ipsum dolor sit amet
+            consectetur adipisicing elit. Praesentium, mollitia beatae
+            exercitationem veritatis nam alias ea excepturi tempora nisi rerum
+            neque. Mollitia sunt, maxime quasi sed nobis vel dolores aperiam?
+          </p>
+          <p class="article-body__text">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae
+            repudiandae vel inventore velit nostrum! Laboriosam rerum, dolorum
+            repudiandae eaque pariatur, placeat in labore ipsum dolore totam
+            tempore voluptatibus facilis quaerat. Lorem, ipsum dolor sit amet
+            consectetur adipisicing elit.
+          </p>
+          <ul class="article-body__tag--list">
+            <li class="article-body__tag--item">html</li>
+            <li class="article-body__tag--item">css</li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <h2>recent-posts</h2>
+        <div class="recent-posts">
+          <h3 class="recent-posts__header">Recent Posts</h3>
+          <ul class="recent-posts__list">
+            <li>
+              <a class="recent-posts__link" href="#">Dolor sit amet </a>
+            </li>
+            <li>
+              <a class="recent-posts__link" href="#">Consectetur adipisicing</a>
+            </li>
+            <li>
+              <a class="recent-posts__link" href="#">Nesciunt molestiae cum</a>
+            </li>
+            <li>
+              <a class="recent-posts__link" href="#">At maiores et officia m</a>
+            </li>
+          </ul>
         </div>
       </section>
-      <section id="article-main">
-        <h2>article-main</h2>
-      </section>
-      <section id="recent-posts">
-        <h2>recent-posts</h2>
-      </section>
-      <section id="recent-comments">
+      <section>
         <h2>recent-comments</h2>
+        <div class="recent-comments">
+          <h3 class="recent-comments__header">Recent Comments</h3>
+          <ul class="recent-comments__list">
+            <li>
+              <a class="recent-comments__link" href="#">Dolor sit amet </a>
+            </li>
+            <li>
+              <a class="recent-comments__link" href="#"
+                >Consectetur adipisicing</a
+              >
+            </li>
+            <li>
+              <a class="recent-comments__link" href="#"
+                >Nesciunt molestiae cum</a
+              >
+            </li>
+            <li>
+              <a class="recent-comments__link" href="#"
+                >At maiores et officia m</a
+              >
+            </li>
+          </ul>
+        </div>
       </section>
       <section id="contact-form">
         <h2>contact-form</h2>
+        <form class="contact-form">
+          <label class="contact-form__label">
+            Message<textarea class="contact-form__input" rows="5"></textarea>
+          </label>
+          <label class="contact-form__label"
+            >Name
+            <input class="contact-form__input" type="text" name="contact-name"
+          /></label>
+          <label class="contact-form__label">
+            Email *<input class="contact-form__input" type="email"
+          /></label>
+          <label class="contact-form__label">
+            Website *<input class="contact-form__input" type="email"
+          /></label>
+        </form>
       </section>
-    </div>
+    </article>
   </body>
 </html>
