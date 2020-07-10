@@ -1,0 +1,73 @@
+.container {
+  display: grid;
+  max-width: 1000px;
+  margin: auto;
+  padding: 1rem;
+}
+
+.photo-grid__image {
+  object-fit: cover;
+}
+
+.photo-grid {
+  &__portrait-4,
+  &__landscape-2,
+  &__landscape-3,
+  &__landscape-4 {
+    display: none;
+  }
+
+  @include for-tablet-portrait-up {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas:
+      "portrait-1 landscape-1"
+      "portrait-1 portrait-2"
+      "portrait-3 portrait-2"
+      "portrait-3 landscape-2"
+      "portrait-4 landscape-3"
+      "portrait-4 landscape-4";
+
+    &__portrait-4,
+    &__landscape-2,
+    &__landscape-3,
+    &__landscape-4 {
+      display: block;
+    }
+  }
+
+  &__portrait-1 {
+    @extend .photo-grid__image;
+    grid-area: portrait-1;
+  }
+  &__portrait-2 {
+    @extend .photo-grid__image;
+    grid-area: portrait-2;
+  }
+  &__portrait-3 {
+    @extend .photo-grid__image;
+    grid-area: portrait-3;
+  }
+  &__portrait-4 {
+    @extend .photo-grid__image;
+    grid-area: portrait-4;
+  }
+  &__landscape-1 {
+    @extend .photo-grid__image;
+    grid-area: landscape-1;
+  }
+  &__landscape-2 {
+    @extend .photo-grid__image;
+    grid-area: landscape-2;
+  }
+  &__landscape-3 {
+    @extend .photo-grid__image;
+    grid-area: landscape-3;
+  }
+  &__landscape-4 {
+    @extend .photo-grid__image;
+    grid-area: landscape-4;
+  }
+}

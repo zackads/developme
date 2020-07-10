@@ -38,3 +38,9 @@ $form-outline-color: #b2b5ba;
     @content;
   }
 }
+
+/* All images responsive */
+img {
+  width: 100%;
+  height: auto;
+}

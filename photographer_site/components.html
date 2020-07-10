@@ -43,17 +43,17 @@
     <article class="content">
       <section id="navbar-links">
         <h2>navbar-links</h2>
-        <nav class="navbar">
-          <ul class="navbar__list">
-            <a class="navbar__link" href="#">home</a>
-            <a class="navbar__link" href="#">blog</a>
-            <a class="navbar__link" href="#">contact</a>
+        <nav class="navbar-links">
+          <ul class="navbar-links__list">
+            <a class="navbar-links__link" href="#">home</a>
+            <a class="navbar-links__link" href="#">blog</a>
+            <a class="navbar-links__link" href="#">contact</a>
           </ul>
         </nav>
       </section>
       <section>
         <h2>hero-image</h2>
-        <div class="hero">
+        <section class="hero">
           <img
             class="hero__image"
             src="/assets/images/hero.png"
@@ -63,29 +63,39 @@
             My name is Jo<span class="hero__text--accent1">.</span><br />
             I'm a <span class="hero__text--accent2">photographer</span>
           </p>
-        </div>
+        </section>
       </section>
       <section id="social-buttons">
         <h2>social-buttons</h2>
         <nav class="social-buttons">
           <ul class="social-buttons__list">
             <li class="social-buttons__link">
-              <img src="/assets/social_icons/twitter.svg" alt="Twitter logo" />
+              <img
+                class="social-buttons__image"
+                src="/assets/icons/twitter.svg"
+                alt="Twitter logo"
+              />
             </li>
             <li class="social-buttons__link">
               <img
-                src="/assets/social_icons/instagram.svg"
+                class="social-buttons__image"
+                src="/assets/icons/instagram.svg"
                 alt="Instagram logo"
               />
             </li>
             <li class="social-buttons__link">
               <img
-                src="/assets/social_icons/facebook.svg"
+                class="social-buttons__image"
+                src="/assets/icons/facebook.svg"
                 alt="Facebook logo"
               />
             </li>
             <li class="social-buttons__link">
-              <img src="/assets/social_icons/youtube.svg" alt="Youtube logo" />
+              <img
+                class="social-buttons__image"
+                src="/assets/icons/youtube.svg"
+                alt="Youtube logo"
+              />
             </li>
           </ul>
         </nav>
@@ -204,6 +214,33 @@
             Website *<input class="contact-form__input" type="email"
           /></label>
         </form>
+      </section>
+    </article>
+    <button type="button" class="collapsible">organisms</button>
+    <article class="content">
+      <section>
+        <h2>header</h2>
+        <section class="header">
+          <h1 class="header__heading--title">
+            <a href="/" aria->Ignis</a>
+          </h1>
+          <nav class="header__navbar">
+            <ul class="navbar__list">
+              <a class="navbar__link" href="#">home</a>
+              <a class="navbar__link" href="#">blog</a>
+              <a class="navbar__link" href="#">contact</a>
+            </ul>
+          </nav>
+          <a class="header__navbar_search" href="#"
+            ><img src="/assets/icons/search.svg" alt="Search icon"
+          /></a>
+          <a class="header__navbar_burger">
+            <img
+              src="/assets/icons/nav_burger.svg"
+              alt="Navigation menu icon"
+            />
+          </a>
+        </section>
       </section>
     </article>
   </body>

@@ -3,7 +3,7 @@ textarea {
   border: 1px solid $form-outline-color;
 }
 
-button {
+.button {
   background-color: $accent-color-1;
   border-radius: 2px;
   border-style: none;
@@ -13,7 +13,7 @@ button {
   color: $accent-text-color;
 }
 
-button:hover {
+.button:hover {
   background-color: $accent-hover-color;
 }
 

@@ -41,8 +41,17 @@ body {
 }
 
 .heading {
+  color: $text-color;
   font-size: 3rem;
   margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: $text-color;
 }
 
 .banner {
@@ -54,6 +63,7 @@ body {
 
 .heading--title {
   @extend .heading;
+  display: inline-block;
   font-family: $accent-font-family;
   font-size: 2.25rem;
 }
@@ -105,10 +115,11 @@ body {
   width: 100%;
   height: auto;
   color: $accent-text-color;
+  margin-bottom: 1rem;
 
   &__image {
     width: 100%;
-    height: auto;
+    height: 100%;
   }
 
   &__text {
