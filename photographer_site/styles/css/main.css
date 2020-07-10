@@ -1,0 +1,406 @@
+/* Colours */
+/* Media breakpoints */
+/* All images responsive */
+@import "_settings.css";
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* Import font files */
+@font-face {
+  font-family: "Pacifico";
+  font-weight: normal;
+  src: url("/fonts/Pacifico-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Nunito";
+  font-weight: normal;
+  src: url("/fonts/Nunito-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Nunito";
+  font-weight: bold;
+  src: url("/fonts/Nunito-Bold.ttf") format("truetype");
+}
+/* Font families */
+/* Typographic elements */
+/* Elements where the function of that element is solely to display text are styled here.  
+Elements containing text but performing another function are styled in the area relevant to that function.  
+E.g. the `<button>` element is styled in `_forms.scss`. */
+html {
+  font-size: 14px;
+}
+@media (min-width: 900px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+  font-family: Nunito, sans-serif;
+  color: #4a4a4a;
+  line-height: 1.6;
+}
+
+.heading, .heading--small, .recent-posts__header,
+.recent-comments__header, .card__heading--small, .heading--title, .header__heading--title {
+  color: #4a4a4a;
+  font-size: 3rem;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: #4a4a4a;
+}
+
+.banner {
+  background-color: #fff0e9;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+}
+
+.heading--title, .header__heading--title {
+  display: inline-block;
+  font-family: Pacifico, sans-serif;
+  font-size: 2.25rem;
+}
+
+.heading--small, .recent-posts__header,
+.recent-comments__header, .card__heading--small {
+  font-size: 1.5rem;
+}
+
+.bodytext, .card__bodytext, .bodytext--small, .article-body__date, .card__bodytext--small, .bodytext--link, .card__bodytext--link, .card__bodytext--link:visited, .bodytext--link:visited {
+  margin: 0;
+}
+
+.bodytext--link, .card__bodytext--link, .card__bodytext--link:visited, .bodytext--link:visited {
+  color: #41cadd;
+}
+
+.bodytext--link:visited, .card__bodytext--link:visited {
+  color: #41cadd;
+}
+
+.bodytext--small, .article-body__date, .card__bodytext--small {
+  font-size: 0.8125rem;
+}
+
+.hero-text, .hero__text--accent2, .hero__text--accent1, .hero__text {
+  font-weight: bold;
+  font-size: 3rem;
+}
+@media (max-width: 599px) {
+  .hero-text, .hero__text--accent2, .hero__text--accent1, .hero__text {
+    font-size: 24px;
+  }
+}
+@media (min-width: 600px) {
+  .hero-text, .hero__text--accent2, .hero__text--accent1, .hero__text {
+    font-size: 36px;
+  }
+}
+@media (min-width: 900px) {
+  .hero-text, .hero__text--accent2, .hero__text--accent1, .hero__text {
+    font-size: 48px;
+  }
+}
+
+.hero {
+  position: relative;
+  text-align: left;
+  width: 100%;
+  height: auto;
+  color: #fefefe;
+  margin-bottom: 1rem;
+}
+.hero__image {
+  width: 100%;
+  height: 100%;
+}
+.hero__text {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translate(0, -50%);
+}
+.hero__text--accent1 {
+  color: #ff6a7c;
+}
+.hero__text--accent2 {
+  font-family: Pacifico, sans-serif;
+  color: #41cadd;
+}
+
+.banner {
+  font-family: Nunito, sans-serif;
+}
+
+.link-list, .recent-posts__list,
+.recent-comments__list {
+  padding: 0;
+  list-style-type: none;
+  line-height: 2.5;
+}
+
+.link-list__a, .recent-posts__link:visited,
+.recent-comments__link:visited, .recent-posts__link,
+.recent-comments__link {
+  color: #4a4a4a;
+}
+
+.navbar {
+  display: inline-block;
+}
+.navbar__list {
+  list-style-type: none;
+}
+.navbar__link {
+  font-family: Nunito, sans-serif;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline;
+  color: #4a4a4a;
+  padding: 0 2rem;
+}
+.navbar__link:hover {
+  text-decoration: underline;
+}
+
+.social-buttons__list {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+.social-buttons__link {
+  display: inline;
+}
+.social-buttons__image {
+  margin: 0 1rem;
+  max-height: 100px;
+  width: auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+.header__heading--title {
+  margin-right: auto;
+}
+.header__navbar {
+  display: none;
+}
+.header__navbar_search {
+  display: none;
+}
+@media (min-width: 900px) {
+  .header__navbar {
+    display: inline;
+  }
+  .header__navbar_search {
+    display: inline;
+  }
+  .header__navbar_burger {
+    display: none;
+  }
+}
+
+input,
+textarea {
+  border: 1px solid #b2b5ba;
+}
+
+.button {
+  background-color: #ff6a7c;
+  border-radius: 2px;
+  border-style: none;
+  padding: 1rem 2rem;
+  font-family: Nunito, sans-serif;
+  font-size: 1.5rem;
+  color: #fefefe;
+}
+
+.button:hover {
+  background-color: rgba(255, 106, 124, 0.8);
+}
+
+.tag, .article-body__tag--item, .card__tag {
+  font-size: 0.875rem;
+  color: #fefefe;
+  background-color: #41cadd;
+  padding: 0.2rem 1rem;
+  border-radius: 2px;
+}
+
+.contact-form__label {
+  display: block;
+  margin-bottom: 1rem;
+}
+.contact-form__input {
+  display: block;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  margin-top: 1rem;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.collapsible:hover {
+  background-color: #ccc;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 18px;
+  display: none;
+  overflow: hidden;
+  background-color: white;
+  border: 2px dashed gainsboro;
+  border-top: 0;
+  border-radius: 2px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  min-height: 447px;
+}
+@media (min-width: 600px) {
+  .card {
+    width: 335px;
+  }
+}
+@media (min-width: 900px) {
+  .card {
+    width: 420px;
+  }
+}
+.card__image {
+  width: 100%;
+  height: auto;
+}
+.card__tag-container {
+  padding: 1rem;
+  text-align: center;
+}
+.card__tag {
+  margin: 0.5rem;
+  display: inline-block;
+}
+.card__heading--small {
+  text-align: center;
+  width: 100%;
+  margin: 0.2rem;
+}
+.card__bodytext--small {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.card__bodytext {
+  text-align: center;
+}
+.card__bodytext--link {
+  margin-top: auto;
+}
+
+.article-body__image {
+  width: 100%;
+  height: auto;
+}
+.article-body__date {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.article-body__tag--list {
+  padding: 0;
+  list-style-type: none;
+}
+.article-body__tag--item {
+  display: inline-block;
+  margin: 1rem 2rem 0 0;
+}
+
+.recent-posts__link,
+.recent-comments__link {
+  color: #4a4a4a;
+}
+.container {
+  display: grid;
+  max-width: 1000px;
+  margin: auto;
+  padding: 1rem;
+}
+
+.photo-grid__image, .photo-grid__landscape-4, .photo-grid__landscape-3, .photo-grid__landscape-2, .photo-grid__landscape-1, .photo-grid__portrait-4, .photo-grid__portrait-3, .photo-grid__portrait-2, .photo-grid__portrait-1 {
+  object-fit: cover;
+}
+
+.photo-grid__portrait-4, .photo-grid__landscape-2, .photo-grid__landscape-3, .photo-grid__landscape-4 {
+  display: none;
+}
+@media (min-width: 600px) {
+  .photo-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: "portrait-1 landscape-1" "portrait-1 portrait-2" "portrait-3 portrait-2" "portrait-3 landscape-2" "portrait-4 landscape-3" "portrait-4 landscape-4";
+  }
+  .photo-grid__portrait-4, .photo-grid__landscape-2, .photo-grid__landscape-3, .photo-grid__landscape-4 {
+    display: block;
+  }
+}
+.photo-grid__portrait-1 {
+  grid-area: portrait-1;
+}
+.photo-grid__portrait-2 {
+  grid-area: portrait-2;
+}
+.photo-grid__portrait-3 {
+  grid-area: portrait-3;
+}
+.photo-grid__portrait-4 {
+  grid-area: portrait-4;
+}
+.photo-grid__landscape-1 {
+  grid-area: landscape-1;
+}
+.photo-grid__landscape-2 {
+  grid-area: landscape-2;
+}
+.photo-grid__landscape-3 {
+  grid-area: landscape-3;
+}
+.photo-grid__landscape-4 {
+  grid-area: landscape-4;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,158 @@
+/* Import font files */
+@font-face {
+  font-family: "Pacifico";
+  font-weight: normal;
+  src: url("/fonts/Pacifico-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-weight: normal;
+  src: url("/fonts/Nunito-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-weight: bold;
+  src: url("/fonts/Nunito-Bold.ttf") format("truetype");
+}
+
+/* Font families */
+$bodytext-font-family: Nunito, sans-serif;
+$accent-font-family: Pacifico, sans-serif;
+
+/* Typographic elements */
+
+/* Elements where the function of that element is solely to display text are styled here.  
+Elements containing text but performing another function are styled in the area relevant to that function.  
+E.g. the `<button>` element is styled in `_forms.scss`. */
+
+html {
+  font-size: 14px;
+  @include for-tablet-landscape-up {
+    font-size: 16px;
+  }
+}
+
+body {
+  font-family: $bodytext-font-family;
+  color: $text-color;
+  line-height: 1.6;
+}
+
+.heading {
+  color: $text-color;
+  font-size: 3rem;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: $text-color;
+}
+
+.banner {
+  background-color: $banner-background-color;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+}
+
+.heading--title {
+  @extend .heading;
+  display: inline-block;
+  font-family: $accent-font-family;
+  font-size: 2.25rem;
+}
+
+.heading--small {
+  @extend .heading;
+  font-size: 1.5rem;
+}
+
+.bodytext {
+  margin: 0;
+}
+
+.bodytext--link {
+  @extend .bodytext;
+  color: $link-color;
+}
+
+.bodytext--link:visited {
+  @extend .bodytext--link;
+  color: $link-color;
+}
+
+.bodytext--small {
+  @extend .bodytext;
+  font-size: 0.8125rem;
+}
+
+.hero-text {
+  font-weight: bold;
+  font-size: 3rem;
+
+  @include for-phone-only {
+    font-size: 24px;
+  }
+
+  @include for-tablet-portrait-up {
+    font-size: 36px;
+  }
+
+  @include for-tablet-landscape-up {
+    font-size: 48px;
+  }
+}
+
+.hero {
+  position: relative;
+  text-align: left;
+  width: 100%;
+  height: auto;
+  color: $accent-text-color;
+  margin-bottom: 1rem;
+
+  &__image {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__text {
+    @extend .hero-text;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translate(0, -50%);
+  }
+
+  &__text--accent1 {
+    @extend .hero-text;
+    color: $accent-color-1;
+  }
+
+  &__text--accent2 {
+    @extend .hero-text;
+    font-family: $accent-font-family;
+    color: $accent-color-2;
+  }
+}
+
+.banner {
+  font-family: $bodytext-font-family;
+}
+
+.link-list {
+  padding: 0;
+  list-style-type: none;
+  line-height: 2.5;
+}
+
+.link-list__a {
+  color: $text-color;
+}
