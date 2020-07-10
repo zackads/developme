@@ -1,5 +1,5 @@
 # developme
-Course projects created during the (DevelopMe_)[https://developme.tech] bootcamp.
+Course projects created during the [DevelopMe_](https://developme.tech) bootcamp.
 
 1.  `week_0`
 - Introductory html and css: Grid/Flexbox, semantic meaning, accessibility.
