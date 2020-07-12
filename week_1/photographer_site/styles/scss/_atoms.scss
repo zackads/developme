@@ -1,0 +1,34 @@
+/* Form atoms */
+input,
+textarea {
+  border: 1px solid $form-outline-color;
+}
+
+.button {
+  background-color: $accent-color-1;
+  border-radius: 2px;
+  border-style: none;
+  padding: 1rem 2rem;
+  font-family: $bodytext-font-family;
+  font-size: 1.5rem;
+  color: $accent-text-color;
+}
+
+.button:hover {
+  background-color: $accent-hover-color;
+}
+
+/* Article atoms */
+.tag {
+  display: inline-block;
+  font-size: 0.875rem;
+  color: $accent-text-color;
+  background-color: $tag-color;
+  padding: 0.2rem 1rem;
+  border-radius: 2px;
+}
+
+/* Photography atoms */
+.photo-grid__image {
+  object-fit: cover;
+}
