@@ -18,6 +18,7 @@ The components are styled in the respective `.scss` partial files in `/styles/sc
 
 ## Folder structure
 
+```
 ├── assets
 │   ├── components
 │   │   ├── atoms.html
@@ -61,3 +62,4 @@ The components are styled in the respective `.scss` partial files in `/styles/sc
 ├── blog.html
 ├── contact.html
 └── index.html
+```
