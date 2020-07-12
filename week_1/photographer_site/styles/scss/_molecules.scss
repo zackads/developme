@@ -1,5 +1,30 @@
+/* Navigation molecules */
+.nav-links {
+  &__list {
+    list-style-type: none;
+  }
+
+  &__li {
+    display: inline-block;
+  }
+
+  &__link {
+    font-family: $bodytext-font-family;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $text-color;
+    padding: 0 2rem;
+  }
+
+  &__link:hover {
+    text-decoration: underline;
+  }
+}
+
+/* Blogging molecules */
 .card {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
@@ -86,15 +111,17 @@
   }
 
   &__list {
-    @extend .link-list;
+    padding: 0;
+    list-style-type: none;
+    line-height: 2.5;
   }
 
   &__link {
-    @extend .link-list__a;
     color: $text-color;
+    text-decoration: underline;
   }
 
   &__link:visited {
-    @extend .link-list__a;
+    color: $text-color;
   }
 }

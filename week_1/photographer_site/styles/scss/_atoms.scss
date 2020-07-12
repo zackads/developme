@@ -1,3 +1,4 @@
+/* Form atoms */
 input,
 textarea {
   border: 1px solid $form-outline-color;
@@ -17,7 +18,9 @@ textarea {
   background-color: $accent-hover-color;
 }
 
+/* Article atoms */
 .tag {
+  display: inline-block;
   font-size: 0.875rem;
   color: $accent-text-color;
   background-color: $tag-color;
@@ -25,15 +28,7 @@ textarea {
   border-radius: 2px;
 }
 
-.contact-form {
-  &__label {
-    display: block;
-    margin-bottom: 1rem;
-  }
-
-  &__input {
-    display: block;
-    margin-top: 1rem;
-    width: 100%;
-  }
+/* Photography atoms */
+.photo-grid__image {
+  object-fit: cover;
 }
