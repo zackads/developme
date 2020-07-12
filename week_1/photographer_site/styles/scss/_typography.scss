@@ -40,12 +40,6 @@ body {
   line-height: 1.6;
 }
 
-.heading {
-  color: $text-color;
-  font-size: 3rem;
-  margin: 0;
-}
-
 a {
   text-decoration: none;
 }
@@ -55,16 +49,29 @@ a:visited {
 }
 
 .banner {
+  font-size: 3rem;
   background-color: $banner-background-color;
-  height: 100px;
+  padding: 3rem;
+  margin: 0;
   line-height: 100px;
   text-align: center;
+}
+
+.heading {
+  color: $text-color;
+  font-size: 3rem;
+  margin: 0;
 }
 
 .heading--title {
   @extend .heading;
   display: inline-block;
   font-family: $accent-font-family;
+  font-size: 2.25rem;
+}
+
+.heading--medium {
+  @extend .heading;
   font-size: 2.25rem;
 }
 

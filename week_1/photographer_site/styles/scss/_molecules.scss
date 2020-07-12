@@ -29,15 +29,7 @@
   align-items: center;
   justify-content: flex-start;
   width: 100%;
-  min-height: 447px;
-
-  @include for-tablet-portrait-up {
-    width: 335px;
-  }
-
-  @include for-tablet-landscape-up {
-    width: 420px;
-  }
+  min-height: 500px;
 
   &__image {
     width: 100%;
@@ -76,6 +68,7 @@
 
   &__bodytext--link {
     @extend .bodytext--link;
+    text-align: center;
     margin-top: auto;
   }
 }
