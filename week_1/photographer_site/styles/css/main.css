@@ -1,7 +1,6 @@
 /* Colours */
 /* Media breakpoints */
 /* All images responsive */
-@import "_settings.css";
 img {
   width: 100%;
   height: auto;
@@ -44,7 +43,7 @@ body {
 }
 
 .heading, .heading--small, .recent-posts__header,
-.recent-comments__header, .card__heading--small, .heading--title, .header__heading--title {
+.recent-comments__header, .card__heading--small, .heading--title, .navbar__heading--title {
   color: #4a4a4a;
   font-size: 3rem;
   margin: 0;
@@ -65,7 +64,7 @@ a:visited {
   text-align: center;
 }
 
-.heading--title, .header__heading--title {
+.heading--title, .navbar__heading--title {
   display: inline-block;
   font-family: Pacifico, sans-serif;
   font-size: 2.25rem;
@@ -143,79 +142,17 @@ a:visited {
   font-family: Nunito, sans-serif;
 }
 
-.link-list, .recent-posts__list,
-.recent-comments__list {
+.link-list {
   padding: 0;
   list-style-type: none;
   line-height: 2.5;
 }
 
-.link-list__a, .recent-posts__link:visited,
-.recent-comments__link:visited, .recent-posts__link,
-.recent-comments__link {
+.link-list__a {
   color: #4a4a4a;
 }
 
-.navbar {
-  display: inline-block;
-}
-.navbar__list {
-  list-style-type: none;
-}
-.navbar__link {
-  font-family: Nunito, sans-serif;
-  font-size: 1.125rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  display: inline;
-  color: #4a4a4a;
-  padding: 0 2rem;
-}
-.navbar__link:hover {
-  text-decoration: underline;
-}
-
-.social-buttons__list {
-  list-style-type: none;
-  padding: 0;
-  text-align: center;
-}
-.social-buttons__link {
-  display: inline;
-}
-.social-buttons__image {
-  margin: 0 1rem;
-  max-height: 100px;
-  width: auto;
-}
-
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  margin-bottom: 1rem;
-}
-.header__heading--title {
-  margin-right: auto;
-}
-.header__navbar {
-  display: none;
-}
-.header__navbar_search {
-  display: none;
-}
-@media (min-width: 900px) {
-  .header__navbar {
-    display: inline;
-  }
-  .header__navbar_search {
-    display: inline;
-  }
-  .header__navbar_burger {
-    display: none;
-  }
-}
-
+/* Form atoms */
 input,
 textarea {
   border: 1px solid #b2b5ba;
@@ -235,7 +172,9 @@ textarea {
   background-color: rgba(255, 106, 124, 0.8);
 }
 
+/* Article atoms */
 .tag, .article-body__tag--item, .card__tag {
+  display: inline-block;
   font-size: 0.875rem;
   color: #fefefe;
   background-color: #41cadd;
@@ -243,49 +182,33 @@ textarea {
   border-radius: 2px;
 }
 
-.contact-form__label {
-  display: block;
-  margin-bottom: 1rem;
-}
-.contact-form__input {
-  display: block;
-  margin-top: 1rem;
-  width: 100%;
+/* Photography atoms */
+.photo-grid__image, .photo-grid__landscape-4, .photo-grid__landscape-3, .photo-grid__landscape-2, .photo-grid__landscape-1, .photo-grid__portrait-4, .photo-grid__portrait-3, .photo-grid__portrait-2, .photo-grid__portrait-1 {
+  object-fit: cover;
 }
 
-/* Style the button that is used to open and close the collapsible content */
-.collapsible {
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  margin-top: 1rem;
+/* Navigation molecules */
+.nav-links__list, .navbar__nav-links {
+  list-style-type: none;
+}
+.nav-links__li {
+  display: inline-block;
+}
+.nav-links__link {
+  font-family: Nunito, sans-serif;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #4a4a4a;
+  padding: 0 2rem;
+}
+.nav-links__link:hover {
+  text-decoration: underline;
 }
 
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active,
-.collapsible:hover {
-  background-color: #ccc;
-}
-
-/* Style the collapsible content. Note: hidden by default */
-.content {
-  padding: 18px;
-  display: none;
-  overflow: hidden;
-  background-color: white;
-  border: 2px dashed gainsboro;
-  border-top: 0;
-  border-radius: 2px;
-}
-
+/* Blogging molecules */
 .card {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
@@ -348,21 +271,90 @@ textarea {
   margin: 1rem 2rem 0 0;
 }
 
+.recent-posts__list,
+.recent-comments__list {
+  padding: 0;
+  list-style-type: none;
+  line-height: 2.5;
+}
 .recent-posts__link,
 .recent-comments__link {
   color: #4a4a4a;
+  text-decoration: underline;
 }
-.container {
-  display: grid;
-  max-width: 1000px;
-  margin: auto;
-  padding: 1rem;
-}
-
-.photo-grid__image, .photo-grid__landscape-4, .photo-grid__landscape-3, .photo-grid__landscape-2, .photo-grid__landscape-1, .photo-grid__portrait-4, .photo-grid__portrait-3, .photo-grid__portrait-2, .photo-grid__portrait-1 {
-  object-fit: cover;
+.recent-posts__link:visited,
+.recent-comments__link:visited {
+  color: #4a4a4a;
 }
 
+/* Navigation organisms */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+.navbar__heading--title {
+  margin-right: auto;
+}
+.navbar__nav-links {
+  display: none;
+}
+.navbar__search {
+  display: none;
+}
+@media (min-width: 900px) {
+  .navbar__nav-links {
+    display: inline;
+  }
+  .navbar__search {
+    display: inline;
+  }
+  .navbar__burger {
+    display: none;
+  }
+}
+
+/* Hero organisms */
+.hero {
+  position: relative;
+  text-align: left;
+  width: 100%;
+  height: auto;
+  color: #fefefe;
+  margin-bottom: 1rem;
+}
+.hero__image {
+  width: 100%;
+  height: 100%;
+}
+.hero__text {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translate(0, -50%);
+}
+.hero__text--accent1 {
+  color: #ff6a7c;
+}
+.hero__text--accent2 {
+  font-family: Pacifico, sans-serif;
+  color: #41cadd;
+}
+
+/* Form organisms */
+.contact-form__label {
+  display: block;
+  margin-bottom: 1rem;
+}
+.contact-form__input {
+  display: block;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+/* Image display organisms */
 .photo-grid__portrait-4, .photo-grid__landscape-2, .photo-grid__landscape-3, .photo-grid__landscape-4 {
   display: none;
 }
@@ -401,6 +393,44 @@ textarea {
 }
 .photo-grid__landscape-4 {
   grid-area: landscape-4;
+}
+
+.social-buttons__list {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+.social-buttons__link {
+  display: inline;
+}
+.social-buttons__image {
+  margin: 0 1rem;
+  max-height: 100px;
+  width: auto;
+}
+
+/* Blog organisms */
+.article-section {
+  /* Article molecule + recent-posts + recent-comments asides */
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "article aside";
+  gap: 2rem;
+}
+.article-section__body {
+  grid-area: article;
+}
+.article-section__aside {
+  grid-area: aside;
+}
+@media (max-width: 599px) {
+  .article-section {
+    grid-template-columns: auto 0;
+  }
+  .article-section__aside {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
