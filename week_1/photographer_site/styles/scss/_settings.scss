@@ -11,6 +11,15 @@ $accent-hover-color: rgba(255, 106, 124, 0.8);
 $accent-text-color: #fefefe;
 $form-outline-color: #b2b5ba;
 
+body {
+  display: grid;
+  gap: 1rem;
+  min-width: 320px;
+  max-width: 700px;
+  margin: auto;
+  padding: 1rem;
+}
+
 /* Media breakpoints */
 // https://www.freecodecamp.org/news/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862/
 @mixin for-phone-only {
@@ -43,4 +52,9 @@ $form-outline-color: #b2b5ba;
 img {
   width: 100%;
   height: auto;
+}
+
+/* Min width for site */
+html {
+  min-width: 320px;
 }

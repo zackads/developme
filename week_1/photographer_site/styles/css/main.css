@@ -1,9 +1,23 @@
 /* Colours */
+body {
+  display: grid;
+  gap: 1rem;
+  min-width: 320px;
+  max-width: 700px;
+  margin: auto;
+  padding: 1rem;
+}
+
 /* Media breakpoints */
 /* All images responsive */
 img {
   width: 100%;
   height: auto;
+}
+
+/* Min width for site */
+html {
+  min-width: 320px;
 }
 
 /* Import font files */
@@ -42,13 +56,6 @@ body {
   line-height: 1.6;
 }
 
-.heading, .heading--small, .recent-posts__header,
-.recent-comments__header, .card__heading--small, .heading--title, .navbar__heading--title {
-  color: #4a4a4a;
-  font-size: 3rem;
-  margin: 0;
-}
-
 a {
   text-decoration: none;
 }
@@ -58,15 +65,28 @@ a:visited {
 }
 
 .banner {
+  font-size: 3rem;
   background-color: #fff0e9;
-  height: 100px;
+  padding: 3rem;
+  margin: 0;
   line-height: 100px;
   text-align: center;
+}
+
+.heading, .heading--small, .recent-posts__header,
+.recent-comments__header, .card__heading--small, .heading--medium, .heading--title, .navbar__heading--title {
+  color: #4a4a4a;
+  font-size: 3rem;
+  margin: 0;
 }
 
 .heading--title, .navbar__heading--title {
   display: inline-block;
   font-family: Pacifico, sans-serif;
+  font-size: 2.25rem;
+}
+
+.heading--medium {
   font-size: 2.25rem;
 }
 
@@ -213,17 +233,7 @@ textarea {
   align-items: center;
   justify-content: flex-start;
   width: 100%;
-  min-height: 447px;
-}
-@media (min-width: 600px) {
-  .card {
-    width: 335px;
-  }
-}
-@media (min-width: 900px) {
-  .card {
-    width: 420px;
-  }
+  min-height: 500px;
 }
 .card__image {
   width: 100%;
@@ -251,6 +261,7 @@ textarea {
   text-align: center;
 }
 .card__bodytext--link {
+  text-align: center;
   margin-top: auto;
 }
 
@@ -292,6 +303,7 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  margin-top: 0.5rem;
   margin-bottom: 1rem;
 }
 .navbar__heading--title {
@@ -430,6 +442,22 @@ textarea {
   }
   .article-section__aside {
     display: none;
+  }
+}
+
+.card-grid {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "1 2" "3 4";
+  gap: 1rem;
+  grid-auto-flow: row;
+}
+@media (max-width: 599px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: "1" "2" "3" "4";
   }
 }
 
