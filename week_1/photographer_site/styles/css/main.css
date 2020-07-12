@@ -356,6 +356,9 @@ textarea {
 }
 
 /* Form organisms */
+.contact-form {
+  max-width: 70%;
+}
 .contact-form__label {
   display: block;
   margin-bottom: 1rem;
@@ -364,6 +367,11 @@ textarea {
   display: block;
   margin-top: 1rem;
   width: 100%;
+}
+@media (max-width: 599px) {
+  .contact-form {
+    max-width: 100%;
+  }
 }
 
 /* Image display organisms */
@@ -438,7 +446,8 @@ textarea {
 }
 @media (max-width: 599px) {
   .article-section {
-    grid-template-columns: auto 0;
+    grid-template-columns: auto;
+    grid-template-areas: "article";
   }
   .article-section__aside {
     display: none;
