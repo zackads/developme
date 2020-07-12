@@ -438,7 +438,8 @@ textarea {
 }
 @media (max-width: 599px) {
   .article-section {
-    grid-template-columns: auto 0;
+    grid-template-columns: auto;
+    grid-template-areas: "article";
   }
   .article-section__aside {
     display: none;
