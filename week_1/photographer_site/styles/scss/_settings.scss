@@ -20,6 +20,12 @@ body {
   padding: 1rem;
 }
 
+/* All images responsive */
+img {
+  width: 100%;
+  height: auto;
+}
+
 /* Media breakpoints */
 // https://www.freecodecamp.org/news/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862/
 @mixin for-phone-only {
@@ -46,15 +52,4 @@ body {
   @media (min-width: 1800px) {
     @content;
   }
-}
-
-/* All images responsive */
-img {
-  width: 100%;
-  height: auto;
-}
-
-/* Min width for site */
-html {
-  min-width: 320px;
 }
