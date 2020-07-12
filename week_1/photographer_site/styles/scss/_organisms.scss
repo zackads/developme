@@ -72,6 +72,8 @@
 
 /* Form organisms */
 .contact-form {
+  max-width: 70%;
+
   &__label {
     display: block;
     margin-bottom: 1rem;
@@ -81,6 +83,10 @@
     display: block;
     margin-top: 1rem;
     width: 100%;
+  }
+
+  @include for-phone-only {
+    max-width: 100%;
   }
 }
 
