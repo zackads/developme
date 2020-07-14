@@ -1,6 +1,6 @@
 let wow = (n) => {
   let oStr = "";
-  for (let i = 0; i < n; i++) {
+  for (let i = 0; i < n; i += 1) {
     oStr += "o";
   }
   return "W" + oStr + "w";

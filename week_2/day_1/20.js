@@ -1,8 +1,15 @@
 let prime = (num) => {
-  for (let i = 2, sqrt = Math.sqrt(num); i <= sqrt; i++) {
-    if (num % i === 0) return false;
+  const sqrt = Math.sqrt(num);
+  if (num === 1) {
+    return false;
+  } else {
+    for (let i = 2; i <= sqrt; i += 1) {
+      if (num % i === 0) {
+        return false;
+      }
+    }
+    return true;
   }
-  return true;
 };
 
 console.log(
