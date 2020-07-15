@@ -1,5 +1,6 @@
 let min = (firstNum, secondNum) =>
-  firstNum > secondNum ? secondNum : firstNum;
+  firstNum < secondNum ? firstNum : secondNum;
+
 console.log(
   min(1, 2), // 1
   min(3, -2), // -2

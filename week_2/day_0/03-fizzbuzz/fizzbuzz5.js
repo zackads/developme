@@ -1,11 +1,7 @@
-function fizzbuzz() {
-  for (let i = 1; i <= 100; i++) {
-    let printString = "";
-    if (i % 3 === 0) printString += "Fizz";
-    if (i % 5 === 0) printString += "Buzz";
+for (let i = 1; i <= 100; i++) {
+  let logString = "";
+  if (i % 3 === 0) logString += "Fizz";
+  if (i % 5 === 0) logString += "Buzz";
 
-    printString.length === 0 ? console.log(i) : console.log(printString);
-  }
+  console.log(logString ? logString : i);
 }
-
-fizzbuzz();
