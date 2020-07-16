@@ -1,15 +1,15 @@
 // Create a function called frequency that takes a string as an argument. It should return an object where each key represents a letter that appears in the string and the value is how many times that letter appears. It doesn't need to count spaces and it should ignore whether the letter is uppercase or lowercase.
 
-let frequency = (string) => {
-  return string
+let frequency = (string) =>
+  string
     .toLowerCase()
     .split("")
+    .sort()
     .filter((char) => char !== " ")
     .reduce((counts, char) => {
       char in counts ? counts[char]++ : (counts[char] = 1);
       return counts;
     }, {});
-};
 
 console.log(frequency("The quick brown fox jumps over the lazy dog"));
 
@@ -29,15 +29,15 @@ console.log(frequency("Wkh sdvvzrug lv vhyhq grqw whoo dqbrqh"));
     }
 */
 
-// `forEach` solution
+// // `forEach` solution
 // let frequency = (string) => {
-//     let counts = {};
-//     string
-//       .toLowerCase()
-//       .split("")
-//       .filter((char) => char !== " ")
-//       .forEach((char) => {
-//         counts[char] ? (counts[char] += 1) : (counts[char] = 1);
-//       });
-//     return counts;
-//   };
+//   let counts = {};
+//   string
+//     .toLowerCase()
+//     .split("")
+//     .filter((char) => char !== " ")
+//     .forEach((char) => {
+//       counts[char] ? (counts[char] += 1) : (counts[char] = 1);
+//     });
+//   return counts;
+// };
