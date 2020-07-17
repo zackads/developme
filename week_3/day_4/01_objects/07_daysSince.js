@@ -11,5 +11,4 @@ let daysSince = (date) => {
 console.log(
   daysSince("1984-04-16") // 13 thousand and something
   // why not try *your* date of birth?
-  // "Because I'm going to commit this to GitHub and I don't want the Internet knowing my DoB."
 );

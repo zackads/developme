@@ -1,16 +1,17 @@
 // Create an object literal that represents an address - use different properties for each part of the address. It should have a fullAddress method, which will return the full address as a nicely formatted string.
 
 let address = {
-  houseNumber: 10,
-  street1: "Guinea Street",
+  // houseNumber: "10",
+  street1: "10 Guinea Street",
   street2: "",
   postcode: "BS1 6SX",
   town: "Bristol",
 
   fullAddress() {
-    return this.street2
-      ? `${this.houseNumber} ${this.street1}, ${this.street2}, ${this.postcode}, ${this.town}`
-      : `${this.houseNumber} ${this.street1}, ${this.postcode}, ${this.town}`;
+    // return `${this.houseNumber} ${this.street1}, ${
+    //   this.street2 ? this.street2 + ", " : ""
+    // }${this.postcode}, ${this.town}`;
+    return [this.street1, this.postcode, this.town].join(", ");
   },
 };
 

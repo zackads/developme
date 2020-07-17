@@ -1,7 +1,8 @@
 // Create a function, oaps, that takes an array of objects. It should return an array containing only those objects that have an age property greater than 65
-let oap = (obj) => obj.age > 65;
 
-let oaps = (people) => people.filter(oap);
+let isOAP = (obj) => obj.age > 65; // "Predicate function"
+
+let oaps = (people) => people.filter(isOAP);
 
 (() => {
   let a = { name: "Alice", age: 52 };
