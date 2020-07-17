@@ -16,7 +16,7 @@ class Wombat {
   }
 
   sayHelloTo(wombat) {
-    return `Hello ${wombat.name}`;
+    return `Hello ${wombat.getName()}`;
   }
 
   giveHug() {
