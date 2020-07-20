@@ -15,4 +15,8 @@
 
   let secondList = d.getElementsByClassName("js__second-list")[0];
   secondList.classList.add("pagination");
+
+  // Afternoon - 01
+  let firstListItems = Array.from(firstList.children);
+  firstListItems.map((item) => item.classList.add("list-group-item"));
 })(document);
