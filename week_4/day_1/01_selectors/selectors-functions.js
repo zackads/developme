@@ -2,7 +2,9 @@
   // *** 06 *** (uber-tricksy)
   class SelectorCache {
     getElementBySelector(selector) {
-      return this[selector];
+      return this[selector]
+        ? this[selector]
+        : this.addElementBySelector(selector, element);
     }
 
     addElementBySelector(selector, element) {
@@ -15,12 +17,11 @@
 
   // *** 02 ***
   let addClassTo = (className, selector) => {
-    let el = cache.getElementBySelector(selector) || d.querySelector(selector);
-    if (el) {
+    let el = cache.getElementBySelector(selector);
+    if (el !== null) {
       el.classList.add(className);
-      return cache.addElementBySelector(selector, el);
     }
-    return null;
+    return el;
   };
 
   let addedEl = addClassTo("col-md-12", ".js__first-list");
@@ -31,12 +32,11 @@
 
   // *** 03 ***
   let removeClassFrom = (className, selector) => {
-    let el = cache.getElementBySelector(selector) || d.querySelector(selector);
-    if (el) {
+    let el = cache.getElementBySelector(selector);
+    if (el !== null) {
       el.classList.remove(className);
-      return cache.addElementBySelector(selector, el);
     }
-    return null;
+    return el;
   };
 
   let removedEl = removeClassFrom("col-md-12", ".js__first-list");
@@ -49,7 +49,7 @@
   let addClassesTo = (classNames, selectors) => {
     let elements = selectors.map(
       (selector) =>
-        cache.getElementBySelector(selector) || d.querySelector(selector)
+        cache.getElementBySelector(selector);
     );
     if (elements) {
       elements.forEach((el) => el.classList.add(...classNames));
@@ -68,7 +68,7 @@
   let removeClassesFrom = (classNames, selectors) => {
     let elements = selectors.map(
       (selector) =>
-        cache.getElementBySelector(selector) || d.querySelector(selector)
+        cache.getElementBySelector(selector)
     );
     if (elements) {
       elements.forEach((el) => el.classList.remove(...classNames));
