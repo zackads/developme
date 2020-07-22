@@ -4,6 +4,7 @@
 // Don't use the .flat() or .flatMap() array methods
 // Hint: you can use Array.isArray(val) to check if a value is an array or not... and you might need recursion
 
+// Verbose method:
 // let flatten = (arr) => {
 //   let flatArray = [];
 //   arr.forEach((item) => {
@@ -18,6 +19,7 @@
 //   return flatArray;
 // };
 
+// Reducer method:
 let flatten = (arr) =>
   arr.reduce(
     (flat, cur) => flat.concat(Array.isArray(cur) ? flatten(cur) : cur),
