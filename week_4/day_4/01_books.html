@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Books</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <style>
+      .list-group-item:hover {
+        background: #eee;
+        cursor: pointer;
+      }
+    </style>
+    <script src="01_books.js" defer></script>
+  </head>
+  <body class="container">
+    <header class="page-header col-md-12">
+      <h1>Books</h1>
+    </header>
+
+    <main class="col-md-12">
+      <ul id="list" class="list-group">
+        <li
+          class="list-group-item"
+          data-author="Charles Petzold"
+          data-price="17.18"
+        >
+          Code: The Hidden Language of Computer Hardware and Software
+        </li>
+        <li class="list-group-item" data-author="bell hooks" data-price="8.52">
+          All About Love
+        </li>
+        <li
+          class="list-group-item"
+          data-author="Federico Biancuzzi and Shane Warden"
+          data-price="31.99"
+        >
+          Masterminds of Programming: Conversations with the Creators of Major
+          Programming Languages
+        </li>
+        <li
+          class="list-group-item"
+          data-author="Virginia Woolf"
+          data-price="4.41"
+        >
+          A Room of One's Own
+        </li>
+      </ul>
+    </main>
+  </body>
+</html>

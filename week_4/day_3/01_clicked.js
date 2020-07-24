@@ -1,6 +1,4 @@
 ((d, window) => {
-  // <button id="button" class="btn btn-primary">Click!</button>
-
   const button = d.getElementById("button");
 
   button.addEventListener("click", () => {

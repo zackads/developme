@@ -13,7 +13,7 @@
   // Helper function
   let isPalindrome = (word) => Array.from(word).reverse().join("") === word;
 
-  // Driver code
+  // Event listener
   button.addEventListener("click", () => {
     isPalindrome(input.value)
       ? (output.textContent = messages.isPalindrome)

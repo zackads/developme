@@ -7,9 +7,15 @@
     d.getElementById("blue"),
   ];
 
+  const setColor = (sliders) => {
+    display.style.backgroundColor = `rgb(${sliders[0].value}, ${sliders[1].value}, ${sliders[2].value})`;
+  };
+
   sliders.forEach((slider) => {
     slider.addEventListener("input", () => {
-      display.style.backgroundColor = `rgb(${sliders[0].value}, ${sliders[1].value}, ${sliders[2].value})`;
+      setColor(sliders);
     });
   });
+
+  setColor(sliders);
 })(document, window);

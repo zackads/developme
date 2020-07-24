@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Prof. Calculate</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <style>
+      .buttons,
+      .answer {
+        text-align: center;
+      }
+    </style>
+    <script src="05_calculator.js" defer></script>
+  </head>
+  <body class="container">
+    <header class="page-header">
+      <h1>Mathsification</h1>
+    </header>
+
+    <main id="main" class="col-sm-offset-2 col-sm-8">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input id="value1" class="form-control" />
+        </div>
+        <div class="col-sm-6 form-group">
+          <input id="value2" class="form-control" />
+        </div>
+      </div>
+
+      <div id="buttons" class="row buttons">
+        <button id="add" class="btn btn-primary">+</button>
+        <button id="subtract" class="btn btn-success">-</button>
+        <button id="multiply" class="btn btn-info">×</button>
+        <button id="divide" class="btn btn-warning">÷</button>
+      </div>
+
+      <hr />
+
+      <div class="row">
+        <p id="answer" class="answer well">?</p>
+      </div>
+    </main>
+  </body>
+</html>

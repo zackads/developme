@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Shopping List</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <style></style>
+    <script src="07_shopping.js" defer></script>
+  </head>
+  <body class="container">
+    <header class="page-header col-md-12">
+      <h1>Shopping List</h1>
+    </header>
+
+    <main id="items" class="col-md-6">
+      <h3>Groceries</h3>
+
+      <ul class="list-group">
+        <li class="list-group-item">
+          <button
+            class="pull-right btn btn-primary js__add"
+            data-name="Coffee"
+            data-price="2.5"
+          >
+            Add
+          </button>
+          <h4 class="list-group-item-heading">Coffee</h4>
+          <p class="list-group-item-text">£2.50</p>
+        </li>
+        <li class="list-group-item">
+          <button
+            class="pull-right btn btn-primary js__add"
+            data-name="Tea"
+            data-price="3.5"
+          >
+            Add
+          </button>
+          <h4 class="list-group-item-heading">Tea</h4>
+          <p class="list-group-item-text">£3.50</p>
+        </li>
+        <li class="list-group-item">
+          <button
+            class="pull-right btn btn-primary js__add"
+            data-name="An Elephant"
+            data-price="350000.25"
+          >
+            Add
+          </button>
+          <h4 class="list-group-item-heading">An Elephant</h4>
+          <p class="list-group-item-text">£350,000.25</p>
+        </li>
+        <li class="list-group-item">
+          <button
+            class="pull-right btn btn-primary js__add"
+            data-name="Toilet Paper"
+            data-price="4"
+          >
+            Add
+          </button>
+          <h4 class="list-group-item-heading">Toilet Paper</h4>
+          <p class="list-group-item-text">£4.00</p>
+        </li>
+        <li class="list-group-item">
+          <button
+            class="pull-right btn btn-primary js__add"
+            data-name="Chocolate"
+            data-price="1.5"
+          >
+            Add
+          </button>
+          <h4 class="list-group-item-heading">Chocolate</h4>
+          <p class="list-group-item-text">£1.50</p>
+        </li>
+        <li class="list-group-item">
+          <button
+            class="pull-right btn btn-primary js__add"
+            data-name="Sprouts"
+            data-price="0.1"
+          >
+            Add
+          </button>
+          <h4 class="list-group-item-heading">Sprouts</h4>
+          <p class="list-group-item-text">10p</p>
+        </li>
+        <li class="list-group-item">
+          <button
+            class="pull-right btn btn-primary js__add"
+            data-name="Newspaper"
+            data-price="1.2"
+          >
+            Add
+          </button>
+          <h4 class="list-group-item-heading">Newspaper</h4>
+          <p class="list-group-item-text">£1.20</p>
+        </li>
+        <li class="list-group-item">
+          <button
+            class="pull-right btn btn-primary js__add"
+            data-name="Kittens"
+            data-price="20"
+          >
+            Add
+          </button>
+          <h4 class="list-group-item-heading">Kittens</h4>
+          <p class="list-group-item-text">£20.00</p>
+        </li>
+      </ul>
+    </main>
+
+    <aside class="col-md-6">
+      <h3>Your Basket</h3>
+
+      <table id="shopping-list" class="table">
+        <thead>
+          <tr>
+            <th>Item Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>You have nothing in your shopping list</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th colspan="2">Total</th>
+            <th id="total"></th>
+          </tr>
+        </tfoot>
+      </table>
+    </aside>
+  </body>
+</html>

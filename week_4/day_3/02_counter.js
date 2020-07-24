@@ -1,8 +1,10 @@
 ((d, window) => {
   const button = d.getElementById("button");
+  const counter = d.getElementById("counter");
 
   let clickCounter = 0;
   button.addEventListener("click", () => {
-    d.getElementById("counter").textContent = clickCounter += 1;
+    clickCounter += 1;
+    counter.textContent = clickCounter;
   });
 })(document, window);
