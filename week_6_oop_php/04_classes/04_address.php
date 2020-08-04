@@ -2,32 +2,46 @@
 
 require __DIR__ . "/vendor/autoload.php";
 
-class Address 
+class Address
 {
     private $street;
     private $postcode;
     private $town;
 
-    public function __construct($street, $postcode, $town) {
+    public function __construct($street, $postcode, $town)
+    {
         $this->street = $street;
         $this->postcode = $postcode;
         $this->town = $town;
     }
 
-    public function setStreet($street) {
+    public function setStreet($street)
+    {
         $this->street = $street;
     }
 
-    public function setPostcode($postcode) {
+    public function setPostcode($postcode)
+    {
         $this->postcode = $postcode;
     }
 
-    public function setTown($town) {
+    public function setTown($town)
+    {
         $this->town = $town;
     }
 
-    public function fullAddress() {
-        return implode(", ", array_values(get_object_vars($this)));
+    public function fullAddress()
+    {
+        // Bad solution (insecure, returns ALL object properties)
+        // return implode(", ", array_values(get_object_vars($this)));
+
+        // Better solution
+        return implode(", ", [
+            $this->street,
+            $this->town,
+            $this->postcode,
+        ]);
+
     }
 
 }

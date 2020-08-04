@@ -2,29 +2,35 @@
 
 require __DIR__ . "/vendor/autoload.php";
 
-class Bike {
+class Bike
+{
     private $make;
     private $model;
     private $mileage = 0;
 
-    public function __construct($make, $model) {
+    public function __construct($make, $model)
+    {
         $this->make = $make;
         $this->model = $model;
     }
 
-    public function getMake() {
+    public function getMake()
+    {
         return $this->make;
     }
 
-    public function getModel() {
+    public function getModel()
+    {
         return $this->model;
     }
 
-    public function getMileage() {
+    public function getMileage()
+    {
         return $this->mileage;
     }
 
-    public function addRide($miles) {
+    public function addRide($miles)
+    {
         $this->mileage += $miles;
         return $this;
     }

@@ -6,23 +6,28 @@ class Stringy
 {
     private $string;
 
-    public function __construct($string) {
+    public function __construct($string)
+    {
         $this->string = $string;
     }
 
-    public function lower() {
+    public function lower()
+    {
         return strtolower($this->string);
     }
 
-    public function upper() {
+    public function upper()
+    {
         return strtoupper($this->string);
     }
 
-    public function append($string) {
+    public function append($stringToBeAppended)
+    {
         return $this->string . $string;
     }
 
-    public function repeat($num) {
+    public function repeat($num)
+    {
         return str_repeat($this->string, $num);
     }
 }

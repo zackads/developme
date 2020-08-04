@@ -4,21 +4,19 @@ require __DIR__ . "/vendor/autoload.php";
 
 class Validator
 {
-    public function email($email) {
+    public function email($email)
+    {
         return boolval(filter_var($email, FILTER_VALIDATE_EMAIL));
     }
 
-    public function postcodeValid($postcode) {
+    public function postcodeValid($postcode)
+    {
         $postcode_re = "/^[A-Z]{1,2}[0-9]{1,2}[A-Z]?\s[0-9][A-Z]{2}$/";
-        
-        if (preg_match($postcode_re, $postcode) === 1) {
-            return true;
-        } else {
-            return false;
-        }
+        return (preg_match($postcode_re, $postcode) === 1);
     }
 
-    public function postcodeExists($postcode) {
+    public function postcodeExists($postcode)
+    {
         if ($this->postcodeValid($postcode)) {
             return boolval(@file_get_contents("http://api.postcodes.io/postcodes/{$postcode}"));
         } else {
