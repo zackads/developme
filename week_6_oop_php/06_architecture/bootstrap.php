@@ -99,3 +99,15 @@ $walker = new Peep("Walker", "1994-01-12");
 
 dump($alfred->age());
 dump(Peep::getAges([$alfred, $jasmine, $walker])); // [52, 65, 15] (or there abouts)
+
+// Q2 - Using Faker test data
+echo "\nTricksy Question 2\n";
+
+$faker = Faker\Factory::create();
+$faker->seed(1234);
+
+$alfred = new Peep($faker->name, $faker->date);
+$jasmine = new Peep($faker->name, $faker->date);
+$walker = new Peep($faker->name, $faker->date);
+
+dump(Peep::getAges([$alfred, $jasmine, $walker])); // [52, 65, 15] (or there abouts)
