@@ -85,3 +85,17 @@ $otherShelf->addBook(new Book("Delusions of Gender", 338));
 $badLibrary->addShelf($otherShelf);
 
 dump($badLibrary->titles()); // ["Zero: The Biography of a Dangerous Idea", "The Catcher in the Rye", "Stamped from the Beginning", "The Power Broker", "Delusions of Gender"]
+
+// Tricksy
+
+// Q1
+echo "\nTricksy Question 1\n";
+
+use App\People\Person as Peep;
+
+$alfred = new Peep("Alfred", "1967-04-03");
+$jasmine = new Peep("Jasmine", "1954-12-28");
+$walker = new Peep("Walker", "1994-01-12");
+
+dump($alfred->age());
+dump(Peep::getAges([$alfred, $jasmine, $walker])); // [52, 65, 15] (or there abouts)
