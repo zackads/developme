@@ -36,6 +36,22 @@ dump($validator->email("wombat@spoonsplumbing")); // false
 dump($validator->email("wombatspoons")); // false
 dump($validator->email("@wombatspoons")); // false
 
+// it validates email addresses with random data
+$faker = Faker\Factory::create();
+
+echo "\nEmail (using Faker data)\n";
+$testsToComplete = 100;
+$testsFailed = 0;
+for ($i = 1; $i <= $testsToComplete; $i += 1) {
+    $testEmail = $faker->email;
+    if ($validator->email($testEmail) === false) {
+        dump("Test {$i} failed: \"assert $validator->email({$testEmail}) === true\".  Returned false.");
+    }
+}
+dump("{$testsToComplete} tests with Faker data complete: {$testsFailed} failed.");
+
+
+
 // it validates postcodes
 echo "\nPostcode\n";
 dump($validator->postcodeValid("BS4 3UH")); // true
