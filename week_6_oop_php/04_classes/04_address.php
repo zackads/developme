@@ -8,32 +8,32 @@ class Address
     private $postcode;
     private $town;
 
-    public function __construct($street, $postcode, $town)
+    public function __construct(string $street, string $postcode, string $town)
     {
         $this->street = $street;
         $this->postcode = $postcode;
         $this->town = $town;
     }
 
-    public function setStreet($street)
+    public function setStreet(string $street) : Address
     {
         $this->street = $street;
         return $this;
     }
 
-    public function setPostcode($postcode)
+    public function setPostcode(string $postcode) : Address
     {
         $this->postcode = $postcode;
         return $this;
     }
 
-    public function setTown($town)
+    public function setTown(string $town) : Address
     {
         $this->town = $town;
         return $this;
     }
 
-    public function fullAddress()
+    public function fullAddress() : string
     {
         // Bad solution (insecure, returns ALL object properties)
         // return implode(", ", array_values(get_object_vars($this)));

@@ -8,28 +8,28 @@ class Bike
     private $model;
     private $mileage = 0;
 
-    public function __construct($make, $model)
+    public function __construct(string $make, string $model)
     {
         $this->make = $make;
         $this->model = $model;
     }
 
-    public function getMake()
+    public function getMake() : string
     {
         return $this->make;
     }
 
-    public function getModel()
+    public function getModel() : string
     {
         return $this->model;
     }
 
-    public function getMileage()
+    public function getMileage() : int
     {
         return $this->mileage;
     }
 
-    public function addRide($miles)
+    public function addRide(int $miles) : Bike
     {
         $this->mileage += $miles;
         return $this;
