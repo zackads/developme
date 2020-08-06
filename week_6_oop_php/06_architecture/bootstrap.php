@@ -111,3 +111,15 @@ $jasmine = new Peep($faker->name, $faker->date);
 $walker = new Peep($faker->name, $faker->date);
 
 dump(Peep::getAges([$alfred, $jasmine, $walker])); // [52, 65, 15] (or there abouts)
+
+// Uber-tricksy
+
+//Q1 - Using Twig templating 
+
+echo "\nTricksy Question 3\n";
+
+use App\Data\Post;
+
+$post = new Post("Blah");
+$post->setArticle("Blah blah blah");
+dump($post->render()); // big ole rendered HTML
