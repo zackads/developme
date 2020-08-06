@@ -10,19 +10,18 @@ class Post
     private $title;
     private $body;
 
-    public function __construct($title) 
+    public function __construct(string $title)
     {
         $this->title = $title;
-        return $this;
     }
 
-    public function setArticle($body)
+    public function setArticle(string $body) : Post
     {
         $this->body = $body;
         return $this;
     }
 
-    public function render()
+    public function render() : Post
     {
         $loader = new FilesystemLoader(__DIR__ . '/templates');
         $twig = new Environment($loader);
@@ -31,5 +30,7 @@ class Post
             'title' => $this->title, 
             'article' => $this->body
         ]);
+
+        return $this;
     }
 }

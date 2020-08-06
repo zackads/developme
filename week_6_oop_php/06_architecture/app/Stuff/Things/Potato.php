@@ -6,13 +6,13 @@ class Potato
 {
     private $timesWatered = 0;
 
-    public function water()
+    public function water() : Potato
     {
         $this->timesWatered += 1;
         return $this;
     }
 
-    public function hasGrown()
+    public function hasGrown() : int
     {
         return $this->timesWatered >= 5;
     }

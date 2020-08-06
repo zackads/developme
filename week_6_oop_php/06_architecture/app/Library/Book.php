@@ -8,23 +8,24 @@ class Book
     private $totalNumPages;
     private $currentPage = 1;
 
-    public function __construct($title, $totalNumPages)
+    public function __construct(string $title, int $totalNumPages)
     {
         $this->title = $title;
         $this->$totalNumPages = $totalNumPages;
     }
 
-    public function read($numPagesToRead)
+    public function read(int $numPagesToRead) : Book
     {
         $this->currentPage += $numPagesToRead;
+        return $this;
     }
 
-    public function currentPage()
+    public function currentPage() : int
     {
         return $this->currentPage;
     }
 
-    public function getTitle()
+    public function getTitle() : string
     {
         return $this->title;
     }

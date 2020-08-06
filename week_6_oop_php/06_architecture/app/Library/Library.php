@@ -6,13 +6,13 @@ class Library
 {
     private $shelves = [];
     
-    public function addShelf($shelf)
+    public function addShelf(Shelf $shelf) : Library
     {
         array_push($this->shelves, $shelf);
         return $this;
     }
 
-    public function titles()
+    public function titles() : array
     {
         $titles = [];
         
@@ -23,7 +23,7 @@ class Library
         return $titles;
     }
 
-    public function shelves()
+    public function shelves() : array
     {
         return $this->shelves;
     }

@@ -7,20 +7,20 @@ class Person
     private $name;
     private $birthdate;
 
-    static function getAges($people)
-    {
-        return collect($people)->map(function ($person) {
-            return $person->age();
-        }, $people)->all();
-    }
-
     public function __construct($name, $birthdate)
     {
         $this->name = $name;
         $this->birthdate = $birthdate;
     }
 
-    public function age()
+    static function getAges(array $people) : array
+    {
+        return collect($people)->map(function ($person) {
+            return $person->age();
+        }, $people)->all();
+    }
+
+    public function age() : int
     {
         $dob = new \DateTime($this->birthdate);
         $now = new \DateTime();
