@@ -13,7 +13,7 @@ class Recipe
         $this->name = $name;
     }
 
-    public function addIngredient($ingredient, $amount)
+    public function addIngredient(Ingredient $ingredient, string $amount) : Recipe
     {
         // Add an ingredient to the recipe
         array_push($this->ingredients, [
@@ -23,14 +23,14 @@ class Recipe
         return $this;
     }
 
-    public function addInstruction($instruction)
+    public function addInstruction(string $instruction) : Recipe
     {
         // Add an instruction step to the recipe
         array_push($this->instructions, $instruction);
         return $this;
     }
 
-    public function getDietary()
+    public function getDietary() : array
     {
         // Return array of dietary restrictions
         $dietaryRestrictions = [];
@@ -40,13 +40,13 @@ class Recipe
         return $dietaryRestrictions;
     }
 
-    public function displayRecipe()
+    public function displayRecipe() : string
     {
         // Return formatted string of the whole recipe
         return ("{$this->name}\n\nIngredients\n{$this->displayIngredients()}\nMethod\n{$this->displayInstructions()}");
     }
 
-    public function displayIngredients()
+    public function displayIngredients() : string
     {
         // Return formatted string of ingredients
         $string = "";
@@ -56,7 +56,7 @@ class Recipe
         return $string;
     }
 
-    public function displayInstructions()
+    public function displayInstructions() : string
     {
         // Return formatted string of instructions
         $string = "";
@@ -68,16 +68,16 @@ class Recipe
         return $string;
     }
 
-    public function displayDietary()
+    public function displayDietary() : string
     {
         // Return formatted string of dietary restrictions
         return implode(", ", array_unique($this->getDietary()));
     }
 
-    public function vegan()
+    public function vegan() : bool
     {
         // Is the recipe vegan?
-        return in_array("animal produce", $this->getDietary());
+        return !in_array("animal produce", $this->getDietary());
     }
 
 }
@@ -88,29 +88,29 @@ class Ingredient
     private $dietaryNotes = [];
     private $amount;
 
-    public function __construct($name, $dietaryNotes)
+    public function __construct(string $name, array $dietaryNotes)
     {
         $this->name = $name;
         $this->dietaryNotes = $dietaryNotes;
     }
 
-    public function setAmount($amount)
+    public function setAmount(string $amount) : Ingredient
     {
         $this->amount = $amount;
         return $this;
     }
 
-    public function getName()
+    public function getName() : string
     {
         return $this->name;
     }
 
-    public function getAmount()
+    public function getAmount() : string
     {
         return $this->amount;
     }
 
-    public function getDietaryNotes()
+    public function getDietaryNotes() : array
     {
         return $this->dietaryNotes;
     }

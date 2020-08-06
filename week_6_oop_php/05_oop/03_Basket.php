@@ -6,13 +6,13 @@ class Basket
 {
     private $items = [];
 
-    public function add($basketItem)
+    public function add(BasketItem $basketItem) : Basket
     {
         array_push($this->items, $basketItem);
         return $this;
     }
 
-    public function itemNames()
+    public function itemNames() : array
     {
         $itemNames = [];
         foreach ($this->items as $item) {
@@ -21,7 +21,7 @@ class Basket
         return $itemNames;
     }
 
-    public function total()
+    public function total() : string
     {
         $total = 0;
         foreach ($this->items as $item) {
@@ -36,18 +36,18 @@ class BasketItem
     private $name;
     private $price;
 
-    public function __construct($name, $price)
+    public function __construct(string $name, int $price)
     {
         $this->name = $name;
         $this->price = $price;
     }
 
-    public function name()
+    public function name() : string
     {
         return $this->name;
     }
 
-    public function price()
+    public function price() : int
     {
         return $this->price;
     }

@@ -7,13 +7,13 @@ class Person
     private $name;
     private $age;
 
-    public function __construct($name, $age)
+    public function __construct(string $name, int $age)
     {
         $this->name = $name;
         $this->age = $age;
     }
 
-    public function getAge()
+    public function getAge() : int
     {
         return $this->age;
     }
@@ -23,13 +23,13 @@ class House
 {
     private $dwellers = [];
 
-    public function addDweller($person)
+    public function addDweller(Person $person) : House
     {
         array_push($this->dwellers, $person);
         return $this;
     }
 
-    static function census($houses)
+    static function census(array $houses) : array
     {
         $people = [];
 
@@ -40,7 +40,7 @@ class House
         return $people;
     }
 
-    static function averageAge($houses)
+    static function averageAge(array $houses) : float
     {
         $ages = [];
         $count = 0;
