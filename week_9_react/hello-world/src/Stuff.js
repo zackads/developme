@@ -8,7 +8,7 @@ const Stuff = () => (
   <React.Fragment>
     <Header text="Text in a prop!" />
     <Paragraph />
-    <Square />
+    <Square color="blue" />
     <People />
   </React.Fragment>
 );
