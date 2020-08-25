@@ -8,14 +8,14 @@ class Counter extends Component {
       count: this.props.initial,
     };
 
-    this.increase = this.increase.bind(this);
-    this.decrease = this.decrease.bind(this);
+    this.handleClickIncrement = this.handleClickIncrement.bind(this);
+    this.handleClickDecrement = this.handleClickDecrement.bind(this);
   }
 
   handleClickIncrement() {
     if (this.state.count < this.props.max) {
       this.setState({
-        count: this.state.count + 1,
+        count: this.state.count + this.props.step,
       });
     }
   }
@@ -23,7 +23,7 @@ class Counter extends Component {
   handleClickDecrement() {
     if (this.state.count > 0) {
       this.setState({
-        count: this.state.count - 1,
+        count: this.state.count - this.props.step,
       });
     }
   }
@@ -31,16 +31,22 @@ class Counter extends Component {
   render() {
     return (
       <React.Fragment>
-        <p>{this.state.count}</p>
-        <button className="btn btn-dark" onClick={this.increase}>
-          +
-        </button>
-        <button className="btn btn-dark" onClick={this.decrease}>
-          -
-        </button>
+        <div className="card">
+          <p>{this.state.count}</p>
+          <button className="btn btn-dark" onClick={this.handleClickIncrement}>
+            +
+          </button>
+          <button className="btn btn-dark" onClick={this.handleClickDecrement}>
+            -
+          </button>
+        </div>
       </React.Fragment>
     );
   }
 }
+
+Counter.defaultProps = {
+  step: 1,
+};
 
 export default Counter;
