@@ -21,7 +21,7 @@ class ToggleText extends Component {
     return (
       <React.Fragment>
         <p>{this.state.initial ? this.props.initial : this.props.alternate}</p>
-        <button class="btn btn-danger" onClick={this.handleClick}>
+        <button className="btn btn-danger" onClick={this.handleClick}>
           Toggle
         </button>
       </React.Fragment>
