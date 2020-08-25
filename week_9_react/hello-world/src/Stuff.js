@@ -6,7 +6,7 @@ import People from "./People.js";
 
 const Stuff = ({ square }) => (
   <React.Fragment>
-    <Header>Text as a child! Woop woop 🥳</Header>
+    <Header>Text as a child! Woop woop</Header>
     <Paragraph>Paragraph text set as a child!</Paragraph>
     {square ? <Square color="blue" /> : null}
     <People
