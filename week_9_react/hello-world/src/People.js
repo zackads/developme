@@ -4,8 +4,10 @@ const people = ["Steve Stevington", "Emily Blunt", "Matthew McConaughey"];
 
 const People = () => (
   <ul>
-    {people.map((person) => (
-      <li className="page-item">{person}</li>
+    {people.map((person, index) => (
+      <li className="page-item" key={index}>
+        {person}
+      </li>
     ))}
   </ul>
 );
