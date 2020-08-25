@@ -4,7 +4,7 @@ import Clicked from "./Clicked.js";
 
 const App = () => (
   <React.Fragment>
-    <Stuff square={false} />
+    <Stuff square={true} color="purple" />
     <Clicked />
   </React.Fragment>
 );
