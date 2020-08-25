@@ -1,8 +1,8 @@
 import React from "react";
 
-const Header = () => (
+const Header = (props) => (
   <header className="jumbotron">
-    <h1>My Amazing App</h1>
+    <h1>{props.text}</h1>
     <p>It's actually amazing</p>
   </header>
 );

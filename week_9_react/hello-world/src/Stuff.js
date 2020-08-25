@@ -6,7 +6,7 @@ import People from "./People.js";
 
 const Stuff = () => (
   <React.Fragment>
-    <Header />
+    <Header text="Text in a prop!" />
     <Paragraph />
     <Square />
     <People />
