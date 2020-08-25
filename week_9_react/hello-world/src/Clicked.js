@@ -7,12 +7,14 @@ class Clicked extends Component {
     this.state = {
       clicked: false,
     };
+
+    this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick = () => {
+  handleClick() {
     console.log("Clicked!");
     this.setState({ clicked: true });
-  };
+  }
 
   render() {
     return (
