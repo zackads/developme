@@ -2,9 +2,7 @@ import React from "react";
 
 const Paragraph = (props) => (
   <main>
-    <p className="lead">
-      <p>{props.message}</p>
-    </p>
+    <p className="lead">{props.message}</p>
   </main>
 );
 
