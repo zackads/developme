@@ -9,7 +9,9 @@ const Stuff = () => (
     <Header text="Text in a prop!" />
     <Paragraph />
     <Square color="blue" />
-    <People />
+    <People
+      names={["Steve Stevington", "Emily Blunt", "Matthew McConaughey"]}
+    />
   </React.Fragment>
 );
 
