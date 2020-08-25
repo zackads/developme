@@ -1,13 +1,9 @@
 import React from "react";
 
-const Paragraph = (props) => (
+const Paragraph = ({ children }) => (
   <main>
-    <p className="lead">{props.message}</p>
+    <p className="lead">{children}</p>
   </main>
 );
-
-Paragraph.defaultProps = {
-  message: "Default message set in a default property woohoo 🥳",
-};
 
 export default Paragraph;
