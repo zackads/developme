@@ -30,7 +30,7 @@ class Counter extends Component {
 
   render() {
     return (
-      <React.Fragment>
+      <>
         <div className="card">
           <p>{this.state.count}</p>
           <button className="btn btn-dark" onClick={this.handleClickIncrement}>
@@ -40,7 +40,7 @@ class Counter extends Component {
             -
           </button>
         </div>
-      </React.Fragment>
+      </>
     );
   }
 }
