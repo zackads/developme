@@ -35,6 +35,7 @@ function App() {
           <Transform function={(x) => Math.pow(x, 7)} />
           <Transform function={(x) => x + x} />
         </Route>
+        <Footer />
       </>
     </Router>
   );
