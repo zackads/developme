@@ -13,6 +13,7 @@ import FourOhFour from "./FourOhFour.js";
 import Square from "./Square.js";
 import Footer from "./Footer.js";
 import StepCounter from "./StepCounter.js";
+import Progress from "./Progress.js";
 
 function App() {
   return (
@@ -52,6 +53,9 @@ function App() {
               <StepCounter max={match.params.max} step={match.params.step} />
             )}
           />
+          <Route path="/">
+            <Progress />
+          </Route>
           <FourOhFour />
         </Switch>
         <Footer />
