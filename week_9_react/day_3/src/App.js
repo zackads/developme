@@ -10,7 +10,9 @@ import List from "./List.js";
 import Adder from "./Adder.js";
 import Transform from "./Transform.js";
 import FourOhFour from "./FourOhFour.js";
+import Square from "./Square.js";
 import Footer from "./Footer.js";
+import StepCounter from "./StepCounter.js";
 
 function App() {
   return (
@@ -37,6 +39,19 @@ function App() {
             <Transform function={(x) => Math.pow(x, 7)} />
             <Transform function={(x) => x + x} />
           </Route>
+          {/* <Route path="/square">
+            <Square color="pink" />
+          </Route> */}
+          <Route
+            path="/square/:color"
+            render={({ match }) => <Square color={match.params.color} />}
+          />
+          <Route
+            path="/steps/:max/:step"
+            render={({ match }) => (
+              <StepCounter max={match.params.max} step={match.params.step} />
+            )}
+          />
           <FourOhFour />
         </Switch>
         <Footer />
