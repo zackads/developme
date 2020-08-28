@@ -14,6 +14,7 @@ import Square from "./Square.js";
 import Footer from "./Footer.js";
 import StepCounter from "./StepCounter.js";
 import Progress from "./Progress.js";
+import Dates from "./Dates.js";
 
 function App() {
   return (
@@ -54,11 +55,13 @@ function App() {
             )}
           />
           <Route path="/">
-            <Progress />
+            {/* <Progress /> */}
+            <Dates />
           </Route>
           <FourOhFour />
         </Switch>
-        <Footer />
+
+        {/* <Footer /> */}
       </>
     </Router>
   );
