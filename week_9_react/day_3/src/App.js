@@ -16,6 +16,7 @@ import StepCounter from "./StepCounter.js";
 import Progress from "./Progress.js";
 import Dates from "./Dates.js";
 import Times from "./Times.js";
+import MarkDown from "./MarkDown.js";
 
 function App() {
   return (
@@ -59,6 +60,7 @@ function App() {
             {/* <Progress /> */}
             {/* <Dates /> */}
             <Times />
+            <MarkDown />
           </Route>
           <FourOhFour />
         </Switch>
